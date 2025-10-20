@@ -1,1 +1,1 @@
-Deployment link: https://nedbday.github.io/2025/
+NEDB 2026 Deployment link: https://nedbday.github.io/2026/
