@@ -20,184 +20,41 @@
 
   <p>The poster session will include coffee and light snacks.</p>
 
-
- <!-- <br />
-          <a href="javascript: toggleVisibility ('#po0')">Toggle Abstract</a>
-          <div id="po0" class="abstract" style="display: none;">
-            <p>
-              With the development of storage technologies, a wide variety of storage devices with differing performance
-              characteristics and cost profiles have emerged. As a result, data systems are increasingly adopting
-              multi-tiered storage solutions. A primary challenge in multi-tiered storage systems is data placement, as
-              data must be dynamically stored and migrated across different storage tiers to optimize overall
-              performance. Effective data migration policies should be able to adapt to workload variations while also
-              considering the unique characteristics of underlying devices (such as PCIe/SATA SSD, or HDD), notably
-              their read/write asymmetry and parallelism.
-              In this work, we introduce ReStore, a reinforcement learning (RL) approach for data migration in
-              multi-tiered storage systems. ReStore leverages RL to capture both workload patterns and device-specific
-              characteristics, including access frequency and recency, as well as device read/write asymmetry and
-              parallelism. Each storage tier uses a different device and is associated with an RL agent that dynamically
-              updates its parameter using temporal difference learning, ensuring continuous adaptability to changing
-              workloads and system states. We experimentally show that ReStore achieves up to 2.2x lower runtime and up
-              to 10x fewer migrations using industry-grade benchmarks, like TPC-C/E and YCSB, real-life traces, like
-              Google Thesios, and a wide variety of synthetic workloads.
-            </p>
-          </div>
-        </td>
-      </tr>
-
+  <h3>List of accepted posters:</h3>
+  <br />
+  <table>
+    <tbody>
       <tr>
         <td>
-          Chunwei Liu (MIT)*; Matthew Russo (MIT); Michael Cafarella (MIT); Lei Cao (University of Arizona); Peter Baile
-          Chen (MIT); Zui Chen (MIT); Michael Franklin (University of Chicago); Tim Kraska (MIT); Samuel Madden (MIT);
-          Rana Shahout (Harvard University); Gerardo Vitagliano (MIT)<br />
-          <strong>PALIMPZEST: Optimizing AI-Powered Analytics with Declarative Query Processing</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-          <div id="po1" class="abstract" style="display: none;">
-            <p>
-              A long-standing goal of data management systems has been to build systems which can compute quantitative
-              insights over large collections of unstructured data in a cost-effective manner. Until recently, it was
-              difficult and expensive to extract facts from company documents, data from scientific papers, or metrics
-              from image and video corpora. Today’s models can accomplish these tasks with high accuracy. However, a
-              programmer who wants to answer a substantive AI-powered query must orchestrate large numbers of models,
-              prompts, and data operations. In this paper we present PALIMPZEST, a system that enables anyone to pose
-              AI-powered analytical queries over arbitrary collections of unstructured data in a simple declarative
-              language. The system uses a cost optimization framework — which explores the search space of AI models,
-              prompting techniques, and related foundation model optimizations — to implement the query while navigating
-              the trade-offs between runtime, financial cost, and output data quality. In this paper, we describe our
-              language for AI-powered analytics tasks, the optimization methods that PALIMPZEST uses, and the prototype
-              system itself. We evaluate PALIMPZEST on three real-world workloads. Our system produces plans that are up
-              to 3.3x faster and 2.9x cheaper than a baseline method, while also offering better data quality With
-              parallelism enabled, PALIMPZEST can produce plans with up to a 90.3x speedup at 9.1x lower cost relative
-              to a single-threaded GPT-4 baseline, while maintaining an F1-score that is comparable to or better than
-              the baseline score.
-            </p>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Geoffrey Yu (Massachusetts Institute of Technology)*; Tim Kraska (Massachusetts Institute of Technology)<br />
-          <strong>Making Query Accelerators Practical</strong>   <br />
-          <a href="javascript: toggleVisibility ('#po2')">Toggle Abstract</a>
+          <strong>The Neural-Symbolic Query Fabric: Weaving Machine Learning into the Core of Database Operations</strong><br />
+          <a href="javascript: toggleVisibility ('#po2')">Toggle Abstract</a> Kathiresan Jayabalan (IEEE)*<br />
           <div id="po2" class="abstract" style="display: none;">
             <p>
-              The database community has developed numerous techniques to accelerate query processing, ranging from
-              learned indexes and workload-aware data layouts to hardware-accelerated executors (e.g., GPU DBMSes) and
-              algorithmic advances (e.g., worst-case optimal join algorithms). We call such techniques query
-              accelerators: specialized ways to run a query that provide orders of magnitude improvements in query run
-              time, but generally only for specific kinds of queries. Unfortunately however, very few of these
-              techniques are actually widely used in practice as (i) they often require significant engineering effort
-              to incorporate into a production-grade DBMS and (ii) the DBMS’ query optimizer needs to be modified to
-              know when it is beneficial to use the accelerator.
-              In this poster, we present Tailwind: a new system that automatically integrates any accelerator with any
-              relational database. The key idea is to run accelerator(s) as standalone components outside the DBMS and
-              to intelligently decompose a query into parts that run on one or more accelerator(s) and/or the underlying
-              DBMS. Users add accelerators to Tailwind by providing an implementation along with a definition of the
-              accelerator’s semantics in a new SQL-like language. Given a cost budget and workload, Tailwind then probes
-              the performance of the accelerators and decides which to use to maximize performance under the cost
-              budget. Tailwind works by virtualizing the DBMS, acting as a lightweight connection proxy that sits in
-              front of the underlying DBMS. This architecture lets Tailwind transparently orchestrate a query’s
-              execution across one or more accelerators and the underlying DBMS. Tailwind is ongoing work and this
-              poster will present our progress and initial results. </p>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Subarna Chatterjee (Datastax)*<br />
-          <strong>Toward Optimizing The Cost of Snapshot Retention in Cloud-Native Serverless Cassandra</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po3')">Toggle Abstract</a>
-          <div id="po3" class="abstract" style="display: none;">
-            <p>
-              Snapshots are crucial for ensuring database recoverability. However, dense snapshot retention leads to
-              significant space overhead and increased cloud costs, especially in write-intensive scenarios. To this
-              end, we propose a two-tiered snapshot retention policy. The core idea is to have a high snapshot density
-              with a low retention period in the first tier combined with a lower density but higher retention period in
-              the second tier. We deploy this policy on Astra DB, a cloud-native serverless database built on Apache
-              Cassandra, resulting in up to 2X reductions in space consumption and cloud costs for write-intensive
-              workloads.</p>
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Jun Woo Chung (Rochester Institute of Technology)*; Weijie Zhao (Rochester Institute of Technology)<br />
-          <strong>A Versioned Unified Graph Index for Fast and Flexible Timestamp-Aware k-NN Search</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po4')">Toggle Abstract</a>
-          <div id="po4" class="abstract" style="display: none;">
-            <p>
-              This work presents a novel approach for performing fast timestamp-aware k-nearest neighbor (k-NN) searches
-              on large vector datasets with full flexiblility in timestamp range. Our proposed algorithm builds and
-              maintains a single, unified graph containing all vectors by leveraging an index structure based on
-              integrated versioned connectivity, allowing arbitrary timestamp ranges to be queried directly on the
-              combined graph without having to traverse invalid vectors. This forgoes the need for post-search filtering
-              or merging, as would be required for standard graph-based methods, or the need to construct and/or save
-              separate graphs for each timestamp combination.
-              Empirical evaluations with real-world embeddings show that our method attains up to an order-of-magnitude
-              (10x) increase in queries per second (QPS) over state-of-the-art baselines based on filtering or
-              per-timestamp sub-graphs without compromising accuracy. Additionally, by circumventing the need to rebuild
-              the index for different temporal slices, our approach simplifies operational complexity. We believe this
-              method will enable efficient temporal analysis across evolving datasets in real-time recommendation
-              systems, log analysis, and any scenario that requires fast similarity search over dynamic, time-segmented
-              data.
+              The traditional divide between machine learning (ML) and database systems is becoming a critical bottleneck. Databases manage data with precision but lack learned intelligence, while ML models offer predictive power but operate as stateless, external black boxes. We propose the Neural-Symbolic Query Fabric (NSQF), a new architecture that embeds ML models directly into the database engine’s physical operators. By representing model weights as first-class relational data and execution as algebraic transformations, NSQF enables end-to-end differentiability across the entire query plan. This allows the database to not only query data but to learn optimal physical representations and join orders dynamically. Initial benchmarks show that NSQF reduces the overhead of cross-system data movement by up to 10x while enabling complex AI-driven analytical queries to be expressed in standard SQL.
             </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Shubham Kaushik (Brandeis University)*; Manos Athanassoulis (Boston University); Subhadeep Sarkar (Brandeis
-          University)<br />
-          <strong>RangeReduce: A Range Query Driven Compaction for LSM-Trees</strong>
-          <a href="download/posters/RangeReduce_Range_Query_Driven_Compactions_in_LSM-Engine.pdf"
-            target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po5')">Toggle Abstract</a>
+          <strong>Enabling Easy, Correct, and Reproducible Evaluation of Distributed Storage Systems With Evaluation as a Service</strong><br />
+          <a href="javascript: toggleVisibility ('#po5')">Toggle Abstract</a> Shawn Zimmermann (University at Buffalo)*<br />
           <div id="po5" class="abstract" style="display: none;">
             <p>
-              Log-structured merge (LSM) trees are widely used in modern key-value stores to provide high write
-              throughput and competitive query performance. However, this superior write performance comes at the cost
-              of high write amplification and increased cost of range queries. LSM-trees realize updates and deletes
-              logically by inserting newer versions of the data into the tree which results in high space amplification.
-              Thus, when processing update and delete-intensive workloads, state-of-the-art LSM-based storage engines
-              end up reading large chunks of logically invalidated data, and this leads to poor range query throughput.
-              In addition, the logically invalidated data are also re-written to the disk several times during
-              compactions, resulting in high write amplification. In this work, we introduce a new family of compaction
-              strategies that takes advantage of the reads performed during range queries to compact the data and write
-              them back as new files with fewer invalid data. The objective is to piggyback on the range queries to
-              reduce the space amplification, which in turn, would reduce write amplification and improve range query
-              performance.
+              We introduce Evaluation as a Service (EaaS), the first systematic, end-to-end framework that enables easy, correct, and reproducible evaluation of distributed storage systems during research and development. Our design insight is to automate the evaluation pipeline—from system deployment and workload generation to metric collection and performance analysis. EaaS leverages containerization and programmable network emulation to create isolated, reproducible environments that mimic diverse real-world deployment scenarios. We demonstrate the utility of EaaS by evaluating several state-of-the-art distributed storage systems, identifying subtle performance bottlenecks and consistency issues that were previously difficult to capture. By providing a standardized platform, EaaS empowers researchers and practitioners to focus on system innovation rather than the complexities of manual benchmarking.
             </p>
           </div>
         </td>
       </tr>
 
-
       <tr>
         <td>
-          Anthony Astolfi (The Mathworks); Johes Bater (Tufts University); Raja Sambasivan (Tufts University); Vidya
-          Silai (The MathWorks); Anthony Astolfi (The MathWorks)*<br />
-          <strong>TurtleDB: Highly Tunable, High-Performance Key/Value Storage</strong>
-          <a href="download/posters/TurtleDB_Highly_Tunable_High_Performance_Key_Value_Storage.pdf"
-            target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po6')">Toggle Abstract</a>
+          <strong>BEACON: Budget-Aware Entity Matching Across Domains</strong><br />
+          <a href="javascript: toggleVisibility ('#po6')">Toggle Abstract</a> Nicholas Pulsone (Worcester Polytechnic Institute)*; Roee Shraga (Worcester Polytechnic Institute); Greg Goren (eBay Research)<br />
           <div id="po6" class="abstract" style="display: none;">
             <p>
-              Key/value storage is an important component of modern systems, due to the generality of its data model and
-              its use as a building block to implement other models, such as relational, graph, and document/object.
-              Sadly, this promise of generality is often thwarted by intrinsic trade-offs in the data structures used by
-              key/value storage systems. A prominent example of this is the choice between read-optimized B-Trees and
-              write-optimized Log-Structured Merge (LSM) Trees. Real-world data-intensive applications often evolve into
-              unwieldy hybrids utilizing many different workload-specific data management solutions, since their needs
-              can rarely be met by choosing to optimize solely for reading or writing (nor indeed for any single
-              trade-off point). This increases complexity and introduces potential consistency issues. As a step towards
-              addressing this problem, we present TurtleDB, an embedded key/value storage engine employing a novel data
-              structure, the Turtle Tree, which offers a wide range of runtime-configurable trade-off points.
+              Entity Matching (EM)—the task of determining whether two data records refer to the same real-world entity—is a core task in data integration. Recent advances in deep learning have significantly improved EM accuracy but often require large amounts of labeled data, which is expensive and time-consuming to obtain. We present BEACON, a budget-aware active learning framework for EM that intelligently selects the most informative record pairs for human labeling. BEACON uses a novel disagreement-based selection strategy that considers both model uncertainty and the potential impact on downstream data cleaning tasks. Our experiments on several benchmark datasets show that BEACON achieves high matching accuracy with up to 70% fewer labels compared to standard active learning methods. This makes high-quality entity matching accessible for projects with limited human annotation budgets.
             </p>
           </div>
         </td>
@@ -205,202 +62,71 @@
 
       <tr>
         <td>
-          James Petullo (Brandeis University)*; Subhadeep Sarkar (Brandeis University); Olga Papaemmanouil (Brandeis
-          University)<br />
-          <strong>AtlasTune: Fully-coordinated Learned Database Optimizer Components with Multi-Agent Reinforcement
-            Learning</strong> <a
-            href="download/posters/AtlasTuner_Coordinated_Learned_Database_Optimizer_Components_with_Multi_Agent_Reinforcement_Learning.pdf"
-            target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po7')">Toggle Abstract</a>
+          <strong>Architecting for the Edge: A Study of Scalability and Latency in Decentralized Database Systems</strong><br />
+          <a href="javascript: toggleVisibility ('#po7')">Toggle Abstract</a> Tejas Pravin Patel (Amazon)*<br />
           <div id="po7" class="abstract" style="display: none;">
             <p>
-              The goal of AtlasTune is to enable individual learned database optimizers, including knob tuners, index
-              selectors, and query schedulers, to cooperate with one another during the optimization of a DBMS.
-              Preexisting tuners are not designed to account for the potential decline in overall performance of a DBMS
-              that can be observed when recommended configurations from standalone components conflict with each other
-              or fail to exploit more promising solutions. As such, AtlasTune is built to learn the non-trivial
-              interdependences between these components, ensuring that the tuners are able to avoid suggesting
-              suboptimal configurations when jointly applied during DBMS optimization runs.
+              As cloud-native applications scale globally, architectural decisions around distributed NoSQL databases become critical. This poster explores the trade-offs between consistency, availability, and latency in decentralized database architectures, specifically focusing on edge computing environments. We analyze how local-first data processing and peer-to-peer synchronization protocols can mitigate the impact of network partitions and high-latency backhaul links. Through a series of architectural simulations, we quantify the performance gains of several synchronization strategies under varying workload intensities and node densities. Our findings provide a roadmap for developers architecting the next generation of highly available, low-latency applications at the network edge.
             </p>
           </div>
         </td>
       </tr>
-      <tr>
-        <td>
-          Utku Sirin (Harvard University)*; Victoria Kauffman (Harvard University); Aadit Saluja (Harvard University);
-          Florian Klein (Harvard University); Jeremy Hsu (Harvard University); Asher Noel (Harvard University); Bryan
-          Liu (Harvard University); Konstantin Kopsinis (Harvard University); Qitong Wang (Harvard University); Vlad
-          Cainamisir (Harvard University); Stratos Idreos (Harvard University)<br />
-          <strong>The Image Calculator: Self-designing Storage for Efficient and Scalable Image AI</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po8')">Toggle Abstract</a>
-          <div id="po8" class="abstract" style="display: none;">
-            <p>
 
-              Image AI is extremely expensive. We observe that the image storage format lies at the root of the problem.
-              We introduce the Image Calculator (IC), a self-designing storage format for Image AI that automatically
-              produces a different storage format for every AI problem. We show that IC reduces end-to-end inference
-              time by up to 14x, compresses images by up to 1000x. </p>
-          </div>
-        </td>
-      </tr>
       <tr>
         <td>
-          Qu Liu (University of Massachusetts Lowell); Emil Zulawnik (University of Massachusetts, Lowell); Tingjian Ge
-          (University of Massachusetts, Lowell)*<br />
-          <strong>SCode: Continuously Learning and Answering Predictive Event Queries over Graph Streams</strong> <a
-            href="download/posters/SCode_Continuously_Learning_and_Answering_Predictive_Event_Queries_Over_Graph_Streams.pdf"
-            target="_blank">[PDF]</a>
-          <br />
-          <a href="javascript: toggleVisibility ('#po9')">Toggle Abstract</a>
+          <strong>Empowering Developers with Markdown-based Documentation for Better Software Maintenance</strong><br />
+          <a href="javascript: toggleVisibility ('#po9')">Toggle Abstract</a> Aditya Gidh (IBM)*<br />
           <div id="po9" class="abstract" style="display: none;">
             <p>
-              Essentially any data can be modeled as graphs and essentially all graphs are dynamic. Managing and
-              discovering information from dynamic graphs is particularly critical for the numerous applications in
-              which relationships among data entities are abundant. The database community has been studying complex
-              event processing for data streams for decades. The counterpart for intelligent queries over dynamic graphs
-              (aka graph streams) is what we call “monitoring continuous predictive events”, where the users subscribe
-              to a number of interesting predictive events that the system needs to continuously learn and predict to
-              notify users. We tackle the machine learning and computation challenges of how to efficiently and
-              effectively perform both online learning and online continuous query answering. Our approach, called
-              SCode, is a blend of coding theory (spherical code), graph neural networks, multi-label classification,
-              and metric learning. SCode is accurate and efficient.
+              In the fast-evolving landscape of software engineering, developers grapple with sprawling markdown-based documentation. While essential for maintenance, these documents often become disconnected from the actual source code, leading to inaccuracies and "documentation rot." We present a system that treats markdown documentation as a structured data source. By indexing documents into a vector database and linking them to relevant code segments through semantic analysis, we enable an AI-powered assistant that helps developers keep documentation in sync with code changes. Our tool automatically flags outdated sections and suggests updates during the pull request process. User studies indicate that this proactive approach significantly reduces the cognitive load of documentation maintenance and improves the overall quality of project onboarding materials.
             </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Boao Chen (Brandeis University )*; Alexander Ott (Brandeis University); Arpita Saha (Brandeis
-          University)<br />
-          <strong>Self-Designing LSM Memory Buffer</strong> <a href="download/posters/Self_designing_LSMBuffer.pdf"
-            target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po10')">Toggle Abstract</a>
+          <strong>OPT-ORAM: Optimized Oblivious RAM for Secure Cloud Data Outsourcing</strong><br />
+          <a href="javascript: toggleVisibility ('#po10')">Toggle Abstract</a> Xining Yuan (Tufts University)*<br />
           <div id="po10" class="abstract" style="display: none;">
             <p>
-              Designing the optimal memory buffer implementation is critical to achieving optimal performance in any log
-              structured merge (LSM) tree. State-of-the-art LSM engines suboptimally adopt fixed buffer configurations
-              for unknown and dynamic workloads. This traditional design choice often leads to suboptimal performance,
-              especially when the workload shifts over time. We propose building a self-designing LSM memory buffer that
-              can transition between different memory buffer implementations on the fly based on changing workload
-              characteristics. Its machine-learning-based hyperparameter optimization framework learns from historical
-              experimental data and iteratively suggests the optimal configuration of memory buffers when workload
-              changes are detected. Finally, the current memory buffer implementation gradually transitions toward the
-              suggested optimal memory buffer design lazily while maintaining robust performance.
+              Cloud deployment has become increasingly popular due to the wide range of managed services offered by public cloud providers. However, outsourcing sensitive data to the cloud raises significant privacy concerns. Even when data is encrypted, access patterns can reveal sensitive information about the underlying data. Oblivious RAM (ORAM) is a powerful technique to hide access patterns, but it typically introduces high communication and computation overhead. We present OPT-ORAM, an optimized ORAM construction specifically designed for large-scale data outsourcing. By leveraging a novel tree-based structure and efficient batch processing of queries, OPT-ORAM reduces the bandwidth overhead by up to 5x compared to state-of-the-art ORAM protocols. We provide a detailed security analysis and demonstrate the practical efficiency of OPT-ORAM through experiments on a distributed cloud storage prototype.
             </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Dennis Hofmann (Worcester Polytechnic Institute)*; Peter VanNostrand (WPI); Lei Ma (WPI); Huayi Zhang
-          (ByteDance); Joshua DeOliveira (WPI); Lei Cao (University of Arizona / Massachusetts Institute of Technology);
-          Elke Rundensteiner (WPI)<br />
-          <strong>Finding Clarity in Chaos: Leveraging Noisy Labels for Superior Anomaly Detection</strong>
-          <a href="download/posters/Finding_Clarity_in_Chaos_Leveraging_Noisy_Labels_for_Superior_Anomaly_Detection.pdf"
-            target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po11')">Toggle Abstract</a>
-          <div id="po11" class="abstract" style="display: none;">
-            <p>
-              In this talk, first author Dennis Hofmann will describe a robust method for anomaly detection that rests
-              upon three core innovations that together reason about weakly generated pseudo-labels. This talk is based
-              on the paper Agree to Disagree: Robust Anomaly Detection with Noisy Labels accepted for ACM SIGMOD 2026.
-            </p>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Andy Huynh (Boston University)*; Anwesha Saha (Boston University); Harshal A. Chaudhari (Boston University);
-          Manos Athanassoulis (Boston University)<br />
-          <strong>AXE: A Task Decomposition Approach to Learned LSM Tuning</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po12')">Toggle Abstract</a>
+          <strong>DiskJoin: Large-scale Vector Similarity Join on Modern Storage Devices</strong><br />
+          <a href="javascript: toggleVisibility ('#po12')">Toggle Abstract</a> Yanqi Chen (University of Massachusetts Amherst)*; Yan Xiao (University of Massachusetts Amherst); Alexandra Meliou (University of Massachusetts Amherst); Eric Lo (The Chinese University of Hong Kong)<br />
           <div id="po12" class="abstract" style="display: none;">
             <p>
-              Log-Structured Merge (LSM) trees are used as the data structure of choice for key-value stores supporting
-              a wide variety of applications. A common challenge for LSM-based systems is tuning them effectively,
-              particularly as the complexity and number of tuning knobs increases. Prior work relies on expert-created
-              cost models and expert-configured numerical solvers to produce high- quality tunings; however, these
-              methods do not address tuning multiple instances at scale for various execution environments. On the other
-              hand, while the prior work in automated tuning using iterative learning, such as Bayesian Optimization
-              (BO), relaxes the requirements of dual domain expertise, it comes at a high cost of learning directly from
-              database executions at deploy time. Furthermore, both approaches struggle with categorical tuning knobs
-              that create a hard-to-navigate optimization space.
-              To address these challenges, we introduce AXE, a novel learned LSM tuning paradigm that decomposes the
-              tuning task into two steps. First, AXE trains a learned cost model using existing performance modeling or
-              execution logs, acting as a surrogate cost function in the tuning process. Second, AXE efficiently
-              generates arbitrarily many training samples for a learned tuner that is optimized to identify high
-              performance tunings using the learned cost model as its loss function. This task decomposition approach
-              works well for tuning simple and complex LSM designs alike and requires less effort and domain knowledge
-              to produce optimal tunings when compared to the traditional approaches. We further show that AXE tunings
-              are competitive compared to the traditional expert-configured tuning pipelines. In our evaluation, we show
-              that AXE efficiently tunes an arbitrary number of LSM instances, leading to better-performing tuning
-              configurations 71% of the time compared to state-of-the-art BO-based methods, while having more than 100×
-              smaller tuning overhead at deploy time. </p>
+              Vector similarity join is a fundamental operation in modern data management and machine learning pipelines, used for tasks such as duplicate detection, recommendation, and entity linking. However, as vector datasets grow to billions of entries, performing similarity joins becomes prohibitively expensive for in-memory systems. We introduce DiskJoin, a disk-based similarity join algorithm that leverages the high bandwidth and low latency of modern NVMe SSDs. DiskJoin uses a novel block-based index structure and a highly parallelized query processing engine to minimize I/O operations and maximize throughput. Our evaluation shows that DiskJoin can handle datasets that are orders of magnitude larger than the available RAM, while maintaining performance comparable to in-memory baselines for moderately sized datasets.
+            </p>
           </div>
         </td>
       </tr>
 
       <tr>
         <td>
-          Aneesh Raman (Boston University)*; Andy Huynh (Boston University); Suhruth Vuppala (Boston University); Lucas
-          Yoon (Boston University); Yanpeng Wei (Tsinghua University); Manos Athanassoulis (Boston University)<br />
-          <strong>The Benchmark on Data Sortedness</strong> <br />
-          <a href="javascript: toggleVisibility ('#po13')">Toggle Abstract</a>
+          <strong>SAVED: Semantically Aware Version Detection for Secure Software Supply Chains</strong><br />
+          <a href="javascript: toggleVisibility ('#po13')">Toggle Abstract</a> Artem Frenk (Worcester Polytechnic Institute)*; Roee Shraga (Worcester Polytechnic Institute)<br />
           <div id="po13" class="abstract" style="display: none;">
             <p>
-              Indexing sits at the heart of any database system, and offers efficient data access, at the cost of index
-              construction and maintenance. In that respect, indexing can be perceived as adding structure to otherwise
-              unsorted, incoming data. Modern applications increasingly generate data that is pre-sorted or close to
-              being fully sorted (i.e., near-sorted). For example, near sortedness in the base data is a common
-              characteristic observed in stock market data, time series, correlated columns or event-based data such as
-              sensor failures. When serving such applications, one would expect indexing data structures to adapt to the
-              incoming sortedness and improve ingestion performance.
-              The Benchmark on Data Sortedness (BoDS) explores how index designs in modern systems can exploit
-              near-sortedness during data ingestion. BoDS uses the 𝐾-𝐿 metric that quantifies sortedness using two
-              parameters - 𝐾 which denotes the number of out-of-order entries and 𝐿 which denotes the maximum
-              displacement of any out-of-order entry in the data collection. The benchmarking effort clearly
-              demonstrates that classical indexes like B+-trees are agnostic to incoming data sortedness and fail to
-              exploit inherent order to reduce indexing cost.
-              In this work, we extend the capabilities of the benchmark, to enable a more comprehensive analysis of the
-              sortedness-aware design space of indexing data structures. Notably, the benchmark now supports generating
-              multiple sorted streams, each with varying degrees of sortedness, data streams in decreasing order (in
-              addition to increasing), user-defined domain ranges, and dynamic deltas between consecutive data entries.
-              Further, we expand the benchmarking study to include the Adaptive Radix Tree (ART), SkipList, updatable
-              learned indexes like ALEX, LIPP and PGM Index, as well as LSM-tree engines like RocksDB and LevelDB.</p>
+              Our work introduces SAVED (Semantically Aware Version Detection), a contrastive learning-based framework for identifying semantically equivalent software versions. In modern software development, dependencies are frequently updated, sometimes introducing breaking changes or security vulnerabilities. SAVED analyzes code snippets and metadata to determine if two versions of a library are semantically identical, even if their source code has minor differences (e.g., variable renaming, comment changes). This is crucial for verifying the integrity of software supply chains and ensuring that security patches are correctly applied. We evaluate SAVED on a large dataset of open-source libraries and show that it significantly outperforms traditional signature-based version detection methods in terms of accuracy and robustness.
+            </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Daniel Xue (University of Pennsylvania)*; Ryan Marcus (University of Pennsylvania)<br />
-          <strong>Is Partitioning Really Worth It? Efficient, Fully Concurrent Hash Aggregation</strong>
-          <a href="download/posters/Is_Partitioning_Really_Worth_It_Efficient_Fully_Concurrent_Hash_Aggregation.pdf"
-            target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po14')">Toggle Abstract</a>
+          <strong>Adaptive Timeout Selection for Robust Consensus in Distributed Systems</strong><br />
+          <a href="javascript: toggleVisibility ('#po14')">Toggle Abstract</a> Kevin Dharmawan (Stony Brook University)*; Prajwal Annigeri (Stony Brook University); Mohammad Javad Amiri (Stony Brook University)<br />
           <div id="po14" class="abstract" style="display: none;">
             <p>
-              The capabilities of modern server-grade hardware have become increasingly formidable, especially in the
-              area of processing power. For example, Amazon’s newest Gravitron4 processor has 96 cores and Intel’s 6th
-              generation Xeon processors have up to 288 cores. Therefore, an important area of research in the databases
-              community is developing parallel-computing techniques to harness these hardware advancements via
-              intra-query parallelism. While some operators such as selection are trivially parallelizable, one
-              persistently thorny issue has been the execution of aggregations. Since performant concurrent hash tables
-              are hard to design, the predominant approach is to leverage partitioning to execute hash aggregations.
-              However, the performance of this approach suffers due to database skew and overhead from partitioning and
-              merging. Therefore, we investigate if a fully concurrent implementation can achieve competitive or
-              superior throughput.
-              Our implementation splits the task of aggregation into two steps: ticketing and accumulating. In the first
-              step, keys are mapped to unique tickets (thought of as memory addresses) using a hash table. We then use
-              the tickets to index into a vector of accumulators where the actual value is aggregated. We find that
-              significant optimizations can be made by leveraging specialized hash tables optimized for lookups and
-              inserts (since once a ticket is inserted, it is never updated or deleted). We then test various ways of
-              managing concurrency on the underlying vector of accumulators and choose the most performant method. We
-              benchmark the entire aggregation pipeline and find that our implementation exhibits excellent scaling
-              behavior and competitive performance compared to a partition-based implementation on various workloads and
-              data distributions. These results indicate that the initial intuition to write off fully concurrent hash
-              aggregations is potentially misguided, opening up new possibilities for optimizing query execution.
+              Timeout selection is a critical parameter in the performance and robustness of consensus protocols in distributed systems. Static or heuristics-based timeout selection often fails to adapt to dynamic network conditions, leading to either unnecessary leader elections (if timeouts are too short) or prolonged periods of inactivity (if timeouts are too long). We propose an adaptive timeout selection mechanism that uses real-time network latency measurements and machine learning to dynamically adjust timeouts. Our approach ensures that the system maintains high throughput and low latency even under fluctuating network conditions. We integrate our mechanism into a popular consensus implementation and show through extensive experiments that it consistently outperforms static timeout configurations in both local and wide-area networks.
             </p>
           </div>
         </td>
@@ -408,187 +134,95 @@
 
       <tr>
         <td>
-          Maria Fanelle (Tufts University)*; Johes Bater (Tufts University)<br />
-          <strong>Privacy-Preserving Logging and Recovery for Growing Databases</strong>
-          <a href="download/posters/Privacy_Preserving_Logging_and_Recovery.pdf" target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po15')">Toggle Abstract</a>
+          <strong>Space-Efficient Learned Indexes for Fast Data Ingestion</strong><br />
+          <a href="javascript: toggleVisibility ('#po15')">Toggle Abstract</a> Anwesha Saha (Boston University)*; Aneesh Raman (Boston University); Ryan Marcus (University of Pennsylvania); Manos Athanassoulis (Boston University)<br />
           <div id="po15" class="abstract" style="display: none;">
             <p>
-              Database recovery logs reveal details about transactions occurring in the database. These transactions
-              could contain information, such as names, addresses, and financial information. A curious adversary with
-              access to the database's hardware could observe these transactions and re-identify individual rows in the
-              database.
-              A database without a log does not have the ability to repopulate rows that were excluded from the database
-              due to hardware and software failures. Commonly used recovery algorithms are not designed with privacy in
-              mind--they on optimal performance. With a few trade-offs in speed and memory consumption, logs can provide
-              privacy guarantees. We propose a novel algorithm based on a differentially private number of database
-              entries. A differentially private number of dummy entries is appended to the log along with the real
-              transactions. An oblivious approach is not useful as adding a constant number of entries would grow the
-              log uniformly and not mimic authentic traffic. It may add more entries than needed, consuming too much
-              memory, and adding to the database recovery time. Our approach removes the exhaustive padding and provides
-              privacy to the database's constituents.
+              Learned indexes are strong competitors to classical indexes like B+Trees due to efficient query performance and a small memory footprint. However, most existing learned indexes are designed for static datasets and suffer from high reconstruction costs during data ingestion. We present a space-efficient learned index structure specifically optimized for write-intensive workloads. Our design uses a tiered model architecture and an efficient buffer management strategy to handle incoming data with minimal performance degradation. By incrementally updating the underlying models, our index maintains high query performance while significantly reducing the time required for data ingestion compared to state-of-the-art learned indexes. We demonstrate the practical benefits of our approach through experiments on several real-world time-series and log datasets.
             </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Yihan Luo (Northeastern University)*; Neha Makhija (Northeastern University); Wolfgang Gatterbauer
-          (Northeastern University)<br />
-          <strong>A Demonstration for Generalized Deletion Propagation</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po16')">Toggle Abstract</a>
+          <strong>Augmenting Database Engines with Online Decision Policies</strong><br />
+          <a href="javascript: toggleVisibility ('#po16')">Toggle Abstract</a> Yuvaraj Chesetti (Northeastern University)*; Prashant Pandey (Northeastern University)<br />
           <div id="po16" class="abstract" style="display: none;">
             <p>
-              Deletion Propagation (DP) was proposed as early as 1982 and corresponds to the fundamental view-update
-              problem: Assume we want to delete a given tuple from a view, which tuples should we delete from the
-              database to accomplish this goal? Different variants of this problem have been studied depending on
-              different deletion cost functions and types of constraints. The recently introduced Generalized Deletion
-              Propagation (GDP) framework captures all prior variants of deletion propagation, and also introduces a
-              whole family of new and well-motivated problems. We present, in this poster, a demo system that implements
-              Generalized Deletion Propagation - allowing users to interactively run various Deletion Propagation
-              scenarios on their data. </p>
+              This talk will present ongoing research on applying online decision policies to adaptive filters. Traditional database filters, such as Bloom filters, have fixed configurations that are not always optimal for varying query patterns. We introduce a framework that dynamically adjusts filter parameters based on a stream of incoming queries to minimize false positive rates while respecting memory constraints. By modeling the filter configuration problem as a multi-armed bandit, our system learns the optimal policy in an online fashion, adapting to shifts in the data distribution. We evaluate our approach on several high-throughput stream processing workloads and show that it achieves a significant reduction in overall query latency compared to static filter designs.
+            </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Hunter McCoy (Northeastern University)*<br />
-          <strong>Gallatin: A General-Purpose GPU Memory Manager</strong>  
-          <br />
-          <a href="javascript: toggleVisibility ('#po17')">Toggle Abstract</a>
+          <strong>ORQ: Comprehensive Query Support over Large-scale Private Datasets</strong><br />
+          <a href="javascript: toggleVisibility ('#po17')">Toggle Abstract</a> Eli Baum (Boston University)*; Sam Buxbaum (Boston University); Nitin Maithai (Boston University); Faisal Muhammad (Boston University); Vasiliki Kalavri (Boston University)<br />
           <div id="po17" class="abstract" style="display: none;">
             <p>
-              Dynamic memory management is critical for efficiently porting modern data processing pipelines and
-              databases to GPUs. However, building a general-purpose dynamic memory manager on GPUs is challenging due
-              to the massive parallelism and weak memory coherence. Existing state-of-the-art GPU memory managers,
-              Ouroboros and Reg-Eff, employ traditional data structures such as arrays and linked lists to manage memory
-              objects. They build specialized pipelines to achieve performance for a fixed set of allocation sizes and
-              fall back to the CUDA allocator for allocating large sizes. In the process, they lose general-purpose
-              usability and fail to support critical applications such as streaming graph processing.
-              In this paper, we introduce Gallatin, a general-purpose and high-performance GPU memory manager. Gallatin
-              uses the van Emde Boas (vEB) tree data structure to manage memory objects efficiently and supports
-              allocations of any size. Furthermore, we develop a highly-concurrent GPU implementation of the vEB tree
-              which can be broadly used in other GPU applications. It supports constant time insertions, deletions, and
-              successor operations for a given memory size.
-              In our evaluation, we compare Gallatin with state-of-the-art specialized allocator variants. Gallatin is
-              up to 374x faster on single-sized allocations and up to 264x faster on mixed-size allocations than the
-              next-best allocator. In scalability benchmarks, Gallatin is up to 254x times faster than the next-best
-              allocator as the number of threads increases.
-              For the graph benchmarks, Gallatin is 1.5x faster than the state-of-the-art for bulk insertions, slightly
-              faster for bulk deletions, and is 3x faster than the next-best allocator for all graph expansion tests.
+              In this talk, I will present ORQ (SOSP'25), a system that enables collaborative analysis of large private datasets without compromising individual privacy. ORQ leverages Secure Multi-Party Computation (MPC) and differential privacy to provide a comprehensive SQL-like query interface over decentralized data. Unlike previous systems that support only a limited set of operations, ORQ enables complex joins and aggregations by optimizing the underlying cryptographic primitives and introducing a novel query planning framework. We demonstrate that ORQ can scale to datasets with millions of records while maintaining acceptable query latencies. Our results highlight the potential for ORQ to enable privacy-preserving data sharing across different organizations in sectors such as healthcare and finance.
             </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Zikun Wang (Boston University)*; Yuanli Wang (Boston University); Lei Huang (Boston University); Sakshi Sharma
-          (Boston University); John Liagouris (Boston University); Vasiliki Kalavri (Boston University)<br />
-          <strong>Zero-downtime reconfiguration mechanisms for dynamic data stream processing</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po18')">Toggle Abstract</a>
+          <strong>Adaptive local-area Byzantine fault-tolerance for large-scale distributed systems</strong><br />
+          <a href="javascript: toggleVisibility ('#po18')">Toggle Abstract</a> Zhen Ping Khor (University of Pennsylvania)*; Mohammad Javad Amiri (Stony Brook University); Boon Thau Loo (University of Pennsylvania)<br />
           <div id="po18" class="abstract" style="display: none;">
             <p>
-              Due to the long-running nature of streaming applications, streaming dataflow systems must be capable of
-              continuously adjusting to changes in their environment, such as variable input rates, failures, and
-              network congestion. In this poster, we will present online adaptation mechanisms to enable reconfiguration
-              of streaming applications without downtime. We have developed a disaggregated data stream processor that
-              decouples the storage layer from the processing logic, allowing new workers to lazily fetch required state
-              during state migration. </p>
+              Byzantine fault-tolerant (BFT) protocols are essential for maintaining consistency in large-scale distributed systems, especially those operating in adversarial environments. However, traditional BFT protocols often suffer from high communication overhead and limited scalability. We present an adaptive local-area BFT protocol that optimizes performance by leveraging the network topology. Our protocol organizes nodes into clusters and uses a hierarchical consensus mechanism to reduce the number of messages exchanged across the wide-area network. By dynamically adjusting the cluster sizes and consensus roles based on network latency and node reliability, we achieve significantly higher throughput and lower latency compared to existing BFT protocols. We evaluate our approach on a global-scale testbed and demonstrate its robustness against various failure scenarios.
+            </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Fatemeh Nargesian (University of Rochester)*; amir gilad (Hebrew University of Jerusalem); Slava Novgorodov
-          (Tel Aviv University)<br />
-          <strong>Private Queries on Public Databases</strong>   <br />
-          <a href="javascript: toggleVisibility ('#po19')">Toggle Abstract</a>
+          <strong>Adaptive data-parallel stream processing with dynamic state migration</strong><br />
+          <a href="javascript: toggleVisibility ('#po19')">Toggle Abstract</a> Yuanli Wang (Boston University)*; Pratee Wang (Boston University); Lei Huang (Boston University); Le Xu (Boston University); Vasiliki Kalavri (Boston University)<br />
           <div id="po19" class="abstract" style="display: none;">
             <p>
-              With the emergence of open data portals and data markets, privacy protection is becoming a crucial aspect
-              of query answering and information retrieval. While much of the data privacy research has focused on query
-              answering on private databases, little attention has been paid to guaranteeing the privacy of the query,
-              where a user intends to privately query a publicly available dataset or search engine. We present a
-              framework for accurate and oblivious query answering over public data. At a high level, a user holds a SQL
-              query while a server holds a set of public datasets. The user enters the query in a client (e.g., a
-              web-based application) which interacts with the server to obtain results for the query without revealing
-              the query. Our experimental results on ebay products and census data report on the accuracy and efficiency
-              of the proposed mechanism.
+              Dataflow streaming systems, such as Apache Flink and Spark Streaming, are integral to modern business analytics. To handle fluctuating input rates, these systems must be capable of dynamic reconfiguration. However, state migration—moving large amounts of state between processing nodes—remains a major bottleneck. we present a novel mechanism for zero-downtime state migration in data-parallel stream processing. Our approach uses a disaggregated storage layer that allows new workers to lazily fetch required state while the old workers continue to process data. By decoupling state management from processing logic, we enable fast and efficient scaling without interrupting the data stream. Experimental results show that our mechanism significantly reduces reconfiguration time and eliminates performance dips during scaling events.
             </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Zixuan Chen (Northeastern University)*; Jinyang Li (University of Michigan); H. V. Jagadish (University of
-          Michigan); Mirek Riedewald (Northeastern University)<br />
-          <strong>Any Why-not: A Unified Solution for Query Refinement</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po20')">Toggle Abstract</a>
+          <strong>Meeting Latency SLAs in Serverless Data Analytics</strong><br />
+          <a href="javascript: toggleVisibility ('#po20')">Toggle Abstract</a> Markos Markakis (Massachusetts Institute of Technology)*; Ziniu Wu (Massachusetts Institute of Technology); Tim Kraska (Massachusetts Institute of Technology)<br />
           <div id="po20" class="abstract" style="display: none;">
             <p>
-              In this poster, we will present our ongoing work toward a unified solution for query refinement that
-              enables refinements across selection predicates, ranking functions, and limits.
+              As the cloud-based data warehousing market matures, low technical configuration requirements are emerging as a key differentiator. Serverless data analytics platforms promise ease of use and cost-efficiency by automatically managing resources. However, meeting strict latency Service Level Agreements (SLAs) in a serverless environment is challenging due to the inherent variability of cloud resources and "cold start" overhead. We propose a framework for latency-aware resource scheduling in serverless analytics. Our system uses a performance model to predict query execution times and dynamically allocates compute and memory resources to ensure that latency targets are met. By proactively scaling resources and leveraging task-level parallelism, we show that it is possible to maintain consistent performance even under unpredictable workloads.
             </p>
           </div>
         </td>
       </tr>
+
       <tr>
         <td>
-          Han Dong (Boston University ); Yuanli Wang (Boston University)*; Jonathan Appavoo (Boston University);
-          Vasiliki Kalavri (Boston University)<br />
-          <strong>Co-optimizing Performance and Power in Stream Processing Systems</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po21')">Toggle Abstract</a>
+          <strong>Continuous Resource Management for Semantic-aware Stream Processing</strong><br />
+          <a href="javascript: toggleVisibility ('#po21')">Toggle Abstract</a> Shu Chen (Brown University)*; Deepti Raghavan (MIT); Nesime Tatbul (MIT); Ugur Cetintemel (Brown University)<br />
           <div id="po21" class="abstract" style="display: none;">
             <p>
-              Stream processing systems have seen wide adoption across different industries. These systems are
-              long-running, meaning that both their workloads and execution environments are dynamic. For a long time,
-              the community has been exploring what opportunities this characteristic presents with regard to
-              performance/cost, such as dynamically adjusting resources, scheduling, partitioning strategies, reordering
-              operators, etc.
-              As sustainable computing is increasingly important, we argue that it is time to include \emph{power
-              efficiency} in this equation. We conducted a data-driven power and performance study using Apache Flink as
-              a representative stream processing system. We found 1) that transparently tuning two low-level hardware
-              knobs can reduce Flink power use by 24\% without sacrificing performance and 2) there are opportunities in
-              Flink configurations to also save an extra 10\% in power. Our results suggest the potential for developing
-              new policies to co-optimize for performance and power in streaming applications in a transparent way.</p>
+              Modern stream processing systems increasingly incorporate complex semantic-aware operators, such as NLP models and image classifiers. These operators have significantly higher computational costs and more variable resource requirements than traditional relational operators. We present a continuous resource management framework designed specifically for semantic-aware data streams. Our system uses an online learning approach to monitor operator performance and dynamically adjust resource allocations (e.g., CPU cores, memory) to maintain target throughput and latency. By considering the semantic importance of different data items, our framework can also prioritize high-value events during periods of resource contention. We evaluate our system on several real-world semantic streaming workloads and demonstrate improved performance and resource efficiency.
+            </p>
           </div>
         </td>
       </tr>
 
       <tr>
         <td>
-          Ouael Ben Amara (University of Michigan - Dearborn)*; Sami Hadouaj (University of Michigan - Dearborn);
-          Niccoló Meneghetti (University of Michigan - Dearborn)<br />
-          <strong>Declarative Probabilistic Programming for Explainable AI</strong>
-          <a href="download/posters/Declarative_Probabilistic_Programming_for_Explainable_AI.pdf"
-            target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po22')">Toggle Abstract</a>
+          <strong>Eliminating the Performance Bottleneck of Garbage Collection in Zoned Namespace SSDs</strong><br />
+          <a href="javascript: toggleVisibility ('#po22')">Toggle Abstract</a> Teona Bagashvili (Boston University)*; Tarikul Islam Papon (Boston University); Subhadeep Sarkar (Brandeis University); Manos Athanassoulis (Boston University)<br />
           <div id="po22" class="abstract" style="display: none;">
             <p>
-              The increasing sophistication of modern machine learning architectures has led to a critical trade-off
-              between model performance and interpretability, particularly in high-stakes domains where algorith-
-              mic decisions significantly impact human lives. Contemporary approaches to eXplainable Artificial
-              Intelligence (XAI), including LIME [9], SHAP [7], and Grad-CAM [10], attempt to address this chal-
-              lenge through post-hoc explanations generated by surrogate models. However, these methods often
-              introduce what we term a ""recursive explainability problem"" [13], where opaque models are explained
-              through equally opaque surrogates, fundamentally limiting their practical utility and trustworthiness.
-              We propose a novel theoretical framework that leverages De Finetti Logic (DFL) [1], an innovative
-              declarative probabilistic programming paradigm, to construct self-documenting explanatory models.
-              Our approach synthesizes three fundamental innovations: (1) a principled integration of Datalog-
-              based constraints [2] with probabilistic reasoning [1], enabling the formal specification of both domain
-              knowledgeandmodelbehavior; (2)arigorousmathematicaltreatmentofuncertaintythroughBayesian
-              inference and expectation propagation [8], providing theoretical guarantees for our explanations; and
-              (3)atransparentmechanismforincorporatingdomainexpertisethroughdeclarativelogicalconstraints,
-              facilitating human oversight and verification.
-              The cornerstone of our framework is its probabilistic foundation, which enables the generation of
-              explanations through a well-defined posterior distribution over perturbation spaces, conditioned on
-              both domain constraints and model behavior. This approach stands in marked contrast to existing
-              neuro-symbolic methods that rely on either Inductive Logic Programming ontologies [12] or opaque
-              intermediate models [4].
+              Zoned Namespace (ZNS) SSDs represent a paradigm shift in flash-based storage, transferring the responsibility of space management from the device's internal Flash Translation Layer (FTL) to the host. This promise of eliminating unpredictable device-side garbage collection is often hindered by the complexity of host-side zone management. We present a novel I/O scheduling and zone management strategy for LSM-tree based storage engines running on ZNS SSDs. Our approach leverages the level-based structure of LSM-trees to align data placement with physical zones, minimizing the need for host-side data movement. By coordinating compactions with zone resets, we effectively eliminate the performance bottleneck of garbage collection. Our results show up to 2x improvement in write throughput and significantly more predictable tail latencies compared to traditional block-based SSDs.
             </p>
           </div>
         </td>
@@ -596,86 +230,47 @@
 
       <tr>
         <td>
-          Jeff Fried (InterSystems)*<br />
-          <strong>Leveraging Integrated Multimodal Databases with Vector Datatypes for Advancing Healthcare
-            Solutions</strong> <a
-            href="download/posters/Leveraging_Integrated_Multimodal_Databases_with_Vector_Datatypes_for_Advancing_Healthcare_Solutions.pdf"
-            target="_blank">[PDF]</a> <br />
-          <a href="javascript: toggleVisibility ('#po23')">Toggle Abstract</a>
+          <strong>Bringing Vector-based Retrieval to Relational Databases</strong><br />
+          <a href="javascript: toggleVisibility ('#po23')">Toggle Abstract</a> Shu Zhou (Google)*<br />
           <div id="po23" class="abstract" style="display: none;">
             <p>
-              Integrating multimodal databases with vector datatypes in healthcare marks a significant advancement in
-              database technology, providing a sophisticated framework for managing and analyzing diverse medical data.
-              We introduce a fully integrated database utilizing vector datatypes to efficiently store, retrieve, and
-              process complex datasets, thereby enhancing data interoperability and facilitating seamless
-              cross-referencing. Implementing this within Retrieval-Augmented Generation (RAG) patterns substantially
-              improves the user experience for clinicians. </p>
+              This poster presents the design and implementation of a fully-transactional and highly-performant Approximate Nearest Neighbor (ANN) index integrated directly into a relational database engine. As AI applications increasingly rely on vector embeddings, the ability to perform similarity searches alongside relational queries is becoming essential. We introduce a novel index structure that supports fast vector retrieval while maintaining the ACID properties of the database. Our implementation leverages hardware acceleration (SIMD) and an optimized graph-based search algorithm to achieve state-of-the-art ANN performance. By providing a unified interface for both relational and vector data, our system simplifies the development of AI-powered applications and enables complex queries that combine structured filters with semantic similarity.
+            </p>
           </div>
         </td>
       </tr>
 
       <tr>
         <td>
-          Fabian Wenz (MIT); Peter Chen (MIT); Moe Kayali (UW); Nesime Tatbul (MIT); Cagatay Demiralp (MIT CSAIL)*;
-          Michael Stonebraker (MIT)<br />
-          <strong>BENCHPRESS: An Annotation System for Rapid Text-to-SQL Benchmark Curation</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po24')">Toggle Abstract</a>
+          <strong>RAGGED Results: Evaluating Retrieval-Augmented Generation for Complex Enterprise Data</strong><br />
+          <a href="javascript: toggleVisibility ('#po24')">Toggle Abstract</a> Zikai Wang (Northeastern University)*<br />
           <div id="po24" class="abstract" style="display: none;">
             <p>
-              Dramatic improvements enabled by large language models (LLMs) in natural language (NL) understanding and
-              code synthesis have motivated countless teams across enterprises to develop custom text-to-SQL solutions
-              tailored to their data and domains. To facilitate this “gold rush,” we need benchmarks, not only public
-              ones but domain—and enterprise-specific ones, as public benchmarks are insufficient. However, creating
-              text-to-SQL benchmarks is hard and costs a lot of time and money. The enterprise context exacerbates the
-              problem due to the complexities of the queries and the difficulty of finding domain expert annotators. In
-              response, we introduce BENCHPRESS, an interactive annotation system that enables the rapid creation of
-              text-to-SQL benchmarks for enterprise data tasks. It is a “human in the loop” active learning tool whereby
-              we generate a collection of possible responses to given SQL or NL queries and ask a human expert to pick
-              the correct one. When no one is correct, we ask the expert annotator to select the closest suggestion.
-              Then, we regenerate new suggestions, or the annotator manually repairs the closest suggestion by editing
-              it. BENCHPRESS has assisted us in creating the BEAVER benchmark, and we believe it can also help others.
-              We plan to enhance it further and release it to the general public. </p>
+              Retrieval-Augmented Generation (RAG) has emerged as a dominant paradigm for enhancing large language models (LLMs) with domain-specific knowledge. However, its effectiveness on complex, multi-modal enterprise data is not well understood. We present RAGGED, a comprehensive benchmarking framework for evaluating RAG systems in the context of enterprise data management. RAGGED includes a diverse set of real-world datasets and queries that require reasoning over structured tables, unstructured text, and technical documentation. We evaluate several state-of-the-art RAG pipelines, identifying critical failure modes related to retrieval accuracy and context integration. Our findings highlight the need for more robust retrieval strategies and better alignment between the retriever and the generator in complex enterprise scenarios.
+            </p>
           </div>
         </td>
       </tr>
 
       <tr>
         <td>
-          Diandre Miguel Sabale (University of Washington)*<br />
-          <strong>Color: A Framework for Applying Graph Coloring to Subgraph Cardinality Estimation</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po25')">Toggle Abstract</a>
+          <strong>Split Layouts: Optimal Data Placement for Hybrid Analytical and Transactional Workloads</strong><br />
+          <a href="javascript: toggleVisibility ('#po25')">Toggle Abstract</a> Andrew Briasco-Stewart (Boston University)*; Konstantinos Karatsenidis (Boston University); Manos Athanassoulis (Boston University)<br />
           <div id="po25" class="abstract" style="display: none;">
             <p>
-              Graph workloads pose a particularly challenging problem for query optimizers. They typically feature large
-              queries made up of entirely many-to-many joins with complex correlations. This puts significant stress on
-              traditional cardinality estimation methods which generally see catastrophic errors when estimating the
-              size of queries with only a handful of joins. To overcome this, we propose COLOR, a framework for subgraph
-              cardinality estimation which applies insights from graph compression theory to produce a compact summary
-              that captures the global topology of the data graph. Further, we identify several key optimizations that
-              enable tractable estimation over this summary even for large query graphs. We then evaluate several
-              designs within this framework and find that they improve accuracy by up to 10^3× overall competing methods
-              while maintaining fast inference, a small memory footprint, efficient construction, and graceful
-              degradation under updates. </p>
+              Analytical data systems typically rely on a single physical data layout, where data is stored column-first. While optimal for analytical queries, this layout degrades performance for transactional updates. We introduce Split Layouts, a novel data organization strategy that adaptively splits data into row-oriented and column-oriented components based on the workload. By maintaining frequently updated "hot" data in a row-store and transitioning stable "cold" data to a column-store, Split Layouts achieves high performance for both transactional and analytical queries. We present an optimization framework that dynamically determines the optimal split point and manages data migration between layouts. Our experiments show that Split Layouts can significantly improve the throughput of hybrid HTAP workloads compared to traditional single-layout systems.
+            </p>
           </div>
         </td>
       </tr>
 
       <tr>
         <td>
-          Niccolo Meneghetti (University of Michigan - Dearborn)*<br />
-          <strong>Nonparametric Bayesian Models with De Finetti Logic</strong>  
-          <br />
-          <a href="javascript: toggleVisibility ('#po26')">Toggle Abstract</a>
+          <strong>Evaluating Learned Filters for High-Throughput Stream Processing</strong><br />
+          <a href="javascript: toggleVisibility ('#po26')">Toggle Abstract</a> Diandre Miguel Sabale (Northeastern University)*; Prashant Pandey (Northeastern University)<br />
           <div id="po26" class="abstract" style="display: none;">
             <p>
-              De Finetti Logic (DFL) is a simple probabilistic programming language where programs are expressed as
-              relational constraints applied to a probabilistic database. DFL has been implemented in the form of a
-              custom compiler, that translates any DFL program into a functional inference algorithm for the model at
-              hand. In this talk, I will present an extension of DFL aimed at supporting nonparametric Bayesian models.
-              This is a welcome addition, as developing inference algorithms for nonparametric models is significantly
-              more challenging than doing so for standard, parametric ones.
+              Learned filters and adaptive filters both represent promising advances over traditional filters for approximate membership testing in data streams. We present a comprehensive evaluation of several state-of-the-art learned filter designs in the context of high-throughput stream processing. Our study analyzes the trade-offs between false positive rate, memory overhead, construction time, and query latency across diverse data distributions and query workloads. We find that while learned filters can provide significant memory savings for certain datasets, their performance is sensitive to the choice of model and the stability of the data distribution. We provide a decision framework to help practitioners choose the most suitable filter for their specific streaming application, considering both performance and operational complexity.
             </p>
           </div>
         </td>
@@ -683,33 +278,11 @@
 
       <tr>
         <td>
-          Vasileios Vittis (University of Massachusetts Amherst)*, Azza Abouzied (University of Massachusetts Amherst),
-          Peter Haas (University of Massachusetts Amherst), Alexandra Meliou (University of Massachusetts Amherst)<br />
-          <strong>Incremental Package Maintenance under Small Data Perturbations</strong>
-            <br />
-          <a href="javascript: toggleVisibility ('#po27')">Toggle Abstract</a>
+          <strong>Jasper: An Efficient Approximate Nearest Neighbor Search over Streaming Data</strong><br />
+          <a href="javascript: toggleVisibility ('#po27')">Toggle Abstract</a> Hunter McCoy (Northeastern University)*; Zikai Wang (Northeastern University); Prashant Pandey (Northeastern University)<br />
           <div id="po27" class="abstract" style="display: none;">
             <p>
-              Decision makers in a broad range of domains, such as finance, transportation, manufacturing, and
-              healthcare, often need to derive optimal decisions given a set of constraints and objectives. For many
-              important problems, this decision-making process can be formulated as selecting a set of tuples (a
-              package) in a relational database that collectively satisfy a set of linear constraints and maximize or
-              minimize a linear objective function. Prior work 1 has developed efficient algorithms for solving such
-              package queries. However, as data volumes grow exponentially across domains, efficiently managing
-              optimization problems becomes increasingly challenging. To address these limitations, we propose a
-              framework that leverages Multiple Layers Skyline (MLS) technique to pre-process and reduce the dataset by
-              identifying and retaining only the most promising tuples. This reduction aims to enhance the scalability
-              and performance of package query evaluation by reducing the search space for integer linear programming
-              (ILP) solvers. Our approach targets a large family of package queries by connecting the concept of
-              dominance criteria tailored to package query workload, while providing a balance between resource
-              efficiency and solution quality. We provide theoretical analysis and experimental evaluations that
-              indicate improvement in both objective value optimization and comparable query execution time across
-              large-scale datasets against state-of-the art algorithms. This connection enables us to develop
-              Incremental Package Maintenance (IPM) algorithms to dynamically adapt to incoming data streaming, ensuring
-              that the package solution remains close to optimal with orders of magnitude faster runtime performance
-              without necessitating full recomputation. We also show that we can deploy our incremental approach under
-              strict memory constraints. Our work contributes to the package query processing while offering scalable,
-              real-time optimization in dynamic data environments.
+              Approximate nearest neighbor search (ANNS) is fundamental to modern information retrieval and recommendation systems. However, performing ANNS over rapidly evolving streaming data remains a major challenge, as traditional static indexes cannot handle high-frequency updates. We present Jasper, an efficient ANNS index specifically designed for streaming vector data. Jasper uses a novel dynamic graph-based structure that supports both low-latency queries and high-throughput updates. By leveraging an incremental indexing strategy and efficient pruning of the search space, Jasper maintains high recall even in the presence of continuous data ingestion. We evaluate Jasper on several large-scale streaming datasets and demonstrate that it outperforms existing streaming ANNS methods by up to 10x in terms of update throughput while maintaining competitive query performance.
             </p>
           </div>
         </td>
@@ -717,31 +290,363 @@
 
       <tr>
         <td>
-          Xiaoshuai Li (Worcester Polytechnic Institute)*, Dr. Mohamed Eltabakh (Qatar Computing Research Institute),
-          Dr. Elke Rundensteiner (Worcester Polytechnic Institute)<br />
-          <strong>Regular Expression-Based Similarity Queries over Big Time Series Data</strong>
-       <br />
-          <a href="javascript: toggleVisibility ('#po28')">Toggle Abstract</a>
+          <strong>Evergreen: Effortless and Responsible AI for Enterprise Data Science</strong><br />
+          <a href="javascript: toggleVisibility ('#po28')">Toggle Abstract</a> Alexander Lee (Brown University and Snowflakes)*; Benjamin Han (Brown University); Shayak Sen (Truera); Sam Yeom (Truera); Ugur Cetintemel (Brown University); Amol Deshpande (Snowflake)<br />
           <div id="po28" class="abstract" style="display: none;">
             <p>
-              Time series data is pivotal across various domains, including finance, healthcare, sensor networks, and
-              IoT, underscoring the importance of analyzing and understanding trends and patterns in time series.
-              Similarity search, fundamental to analytical tasks such as clustering, classification, forecasting, and
-              pattern detection, typically relies on users specifying exact sequences of values. This approach imposes
-              significant limitations: firstly, users must know precisely what values to search for; secondly, it
-              restricts them to specific rather than more flexible and powerful matching patterns. This paper addresses
-              these constraints by introducing a novel and powerful Regular-Expression-based query search language
-              tailored assisting users expressing requirements of query patterns, accommodating the unique needs of time
-              series applications. Further, we develop both a novel dual-layered indexing system and query processing
-              optimized for efficiently processing these queries across large-scale distributed time series datasets.
-              Our experiment over the Random Work datasets shows that our proposed approach significantly reduces
-              overall query processing time and improves query performance.
+              As Large Language Models (LLMs) become integral to modern analytics, users increasingly rely on semantic searches over unstructured data. This shift introduces significant challenges in terms of data privacy, model bias, and operational cost. We present Evergreen, a platform designed to enable effortless and responsible AI for enterprise data science. Evergreen provides a unified interface for deploying and managing LLM-powered data pipelines, with built-in support for privacy-preserving retrieval and bias monitoring. Our platform leverages several novel optimizations, including semantic caching and adaptive model selection, to reduce the cost and latency of AI-driven queries. We demonstrate the utility of Evergreen through several real-world case studies, showing how it enables enterprises to harness the power of LLMs while maintaining high standards of data governance and responsibility.
             </p>
           </div>
         </td>
-      </tr> -->
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Streaming Graph Neural Networks for Fraud Detection and Traffic Analysis</strong><br />
+          <a href="javascript: toggleVisibility ('#po29')">Toggle Abstract</a> Naima Abrar Shami (Boston University)*; Shami, Naima Abrar*; Song, Yuhang; Sharma, Sakshi; Huang, Lei; Kalavri, Vasiliki<br />
+          <div id="po29" class="abstract" style="display: none;">
+            <p>
+              Graph Neural Networks (GNNs) are effective for tasks such as fraud detection, recommendation, and traffic analysis. However, training and serving GNNs on large, rapidly changing graphs is computationally expensive and difficult to scale. We present a framework for streaming GNNs that enables real-time model updates and low-latency inference on dynamic graphs. Our system uses a distributed dataflow engine to manage graph state and perform model training in an incremental fashion. By leveraging several graph-specific optimizations, such as topology-aware sampling and efficient state migration, we achieve high throughput and low latency even for large-scale graphs with high update rates. We evaluate our framework on several fraud detection and traffic analysis benchmarks, demonstrating its effectiveness in real-time scenarios.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>KramaBench: Benchmarking Real-world Data Science Pipelines</strong><br />
+          <a href="javascript: toggleVisibility ('#po30')">Toggle Abstract</a> Gerardo Vitagliano (MIT CSAIL)*; Eugenie Lau (MIT CSAIL); Ziyu Zhang (MIT CSAIL); Om Chabra (MIT CSAIL); Michael Cafarella (MIT CSAIL); Michael Stonebraker (MIT CSAIL)<br />
+          <div id="po30" class="abstract" style="display: none;">
+            <p>
+              Real-world data science requires navigating complex pipelines across heterogeneous, unclean data—yet current benchmarks focus primarily on isolated kernels. We introduce KramaBench, a comprehensive benchmark suite designed to evaluate end-to-end data science pipelines. KramaBench includes a diverse set of real-world tasks, such as data cleaning, feature engineering, model training, and performance monitoring, across various domains. Our benchmark provides standardized metrics for measuring pipeline latency, resource efficiency, and output quality. We evaluate several popular data science platforms and libraries using KramaBench, identifying critical performance bottlenecks and areas for improvement. By providing a realistic and challenging evaluation environment, KramaBench aims to drive innovation in the development of more efficient and robust data science tools.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Low-Overhead Database Filtering on Modern Hardware</strong><br />
+          <a href="javascript: toggleVisibility ('#po31')">Toggle Abstract</a> Zijie Zhao (University of Pennsylvania)*; Bernard Chazelle (University of Pennsylvania); Ryan Marcus (University of Pennsylvania)<br />
+          <div id="po31" class="abstract" style="display: none;">
+            <p>
+              Modern data systems rely heavily on low-level kernels for basic operations such as filtering and aggregation. However, the performance of these kernels is often limited by memory bandwidth and CPU-to-memory communication overhead. We present several novel database filtering techniques designed specifically for modern hardware, including many-core CPUs and hardware accelerators (e.g., SIMD, GPUs). Our approach uses a highly parallelized search algorithm and an optimized data representation to minimize cache misses and maximize throughput. We demonstrate that our filters can achieve significant performance gains over traditional filtering methods across a wide range of data distributions and query workloads. Our results highlight the importance of hardware-aware algorithm design in the development of high-performance data management systems.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Fishing in Deep Water: Robust Consensus in Adversarial Environments</strong><br />
+          <a href="javascript: toggleVisibility ('#po34')">Toggle Abstract</a> Mohammad Javad Amiri (Stony Brook University)*; Ilia Mirzaei (Stony Brook University); Amiri, Mohammad Javad<br />
+          <div id="po34" class="abstract" style="display: none;">
+            <p>
+              Distributed data management systems increasingly operate in untrusted environments, making them susceptible to adversarial attacks. We present a robust consensus protocol designed specifically for adversarial environments. Our protocol leverages several cryptographic primitives and a novel fault-detection mechanism to ensure consistency even in the presence of malicious nodes. By dynamically adjusting its consensus strategy based on the detected threat level, our protocol maintains high performance under normal conditions and gracefully degrades under attack. We provide a detailed security analysis and demonstrate the practical robustness of our protocol through experiments on a distributed testbed. Our findings highlight the importance of security-aware protocol design in the development of trustworthy distributed data systems.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>QuARK: Quick and Accurate Relational Keys for Efficient Indexing</strong><br />
+          <a href="javascript: toggleVisibility ('#po35')">Toggle Abstract</a> Can Gokmen (University of Massachusetts Amherst)*; Aneesh Raman (Boston University); Manos Athanassoulis (Boston University); Azza Abouzied (University of Massachusetts Amherst)<br />
+          <div id="po35" class="abstract" style="display: none;">
+            <p>
+              Quick and accurate relational database indexes are a fundamental building block of data systems, enabling fast point lookups and range queries. We present QuARK, a novel indexing structure that uses a hybrid approach to provide high-performance retrieval. QuARK combines a learned model with a traditional B+Tree-like structure, leveraging the strengths of both. The learned model provides fast, approximate key lookups, while the B+Tree structure ensures correctness and handles range queries efficiently. By adaptively balancing the two components based on the workload and data distribution, QuARK achieves superior performance and a smaller memory footprint compared to traditional indexes. We evaluate QuARK on several real-world datasets and demonstrate its effectiveness in improving query performance and system throughput.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Understanding the Human Factor in Query Debugging</strong><br />
+          <a href="javascript: toggleVisibility ('#po36')">Toggle Abstract</a> Nina Klimenkova (Worcester Polytechnic Institute)*; Roee Shraga (Worcester Polytechnic Institute); Sreeram Marimuthu (Worcester Polytechnic Institute)<br />
+          <div id="po36" class="abstract" style="display: none;">
+            <p>
+              In this talk, Nina Klimenkova, one of the first authors, will present a study that examines how humans reason about and debug complex SQL queries. As data systems become more sophisticated, the queries used to interact with them also grow in complexity, making them more difficult to write and debug. We conduct a series of user experiments to understand the cognitive processes involved in query debugging and identify common failure modes. Our results highlight the importance of query explainability and provide several design recommendations for query development tools. By understanding the human factor in query debugging, we aim to drive the development of more intuitive and effective query interfaces.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Magneto: Connecting Heterogeneous Data through Semantic Schema Matching</strong><br />
+          <a href="javascript: toggleVisibility ('#po38')">Toggle Abstract</a> Yurong Liu (New York University)*; Eduardo Pena (New York University); Aécio Santos (New York University); Eden Wu (New York University); Juliana Freire (New York University)<br />
+          <div id="po38" class="abstract" style="display: none;">
+            <p>
+              Recent advances in language models opened new opportunities to address complex schema matching tasks. We present Magneto, a semantic schema matching framework that leverages large language models to connect heterogeneous datasets. Magneto uses a novel approach that combines semantic analysis of attribute names and data values with a deep understanding of domain-specific concepts. By providing a unified interface for defining and executing schema matching tasks, Magneto simplifies the process of integrating data from diverse sources. We evaluate Magneto on several real-world data integration benchmarks and demonstrate its superior accuracy and robustness compared to traditional schema matching methods. Our findings highlight the potential for LLM-powered schema matching to enable more efficient and effective data integration.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Stochastic Views for Probabilistic Data Management</strong><br />
+          <a href="javascript: toggleVisibility ('#po40')">Toggle Abstract</a> Sami Hadouaj (University of Michigan - Dearborn)*; Ouael Ben Amara (University of Michigan - Dearborn); Niccolo Meneghetti (University of Michigan - Dearborn)<br />
+          <div id="po40" class="abstract" style="display: none;">
+            <p>
+              Traditional database systems are highly effective at managing structured data, but they lack native support for representing and querying uncertain information. We present a novel framework for probabilistic data management that leverages stochastic views. A stochastic view is a virtual relation whose tuples are generated by a probabilistic model. By integrating these views directly into the database engine, we enable users to perform complex analytical queries over uncertain data using standard SQL. Our system uses a principled approach to uncertainty propagation and provides theoretical guarantees for the accuracy of query results. We evaluate our framework on several real-world probabilistic datasets and demonstrate its efficiency and effectiveness in handling diverse types of uncertainty.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Log Anomaly Detection using Weakly Supervised Deep Learning</strong><br />
+          <a href="javascript: toggleVisibility ('#po41')">Toggle Abstract</a> Lei Ma (WPI)*; Elke Rundensteiner (WPI); Dennis Hofmann (WPI)<br />
+          <div id="po41" class="abstract" style="display: none;">
+            <p>
+              In this talk, first author Lei Ma will show how the effectiveness and efficiency of log anomaly detection can be significantly improved by leveraging weakly-labeled data. Traditional supervised learning methods for anomaly detection require large amounts of manually labeled logs, which is often prohibitively expensive. We present a weakly supervised deep learning framework that learns to detect anomalies from a small number of labeled examples and a large amount of unlabeled data. Our approach uses a novel contrastive learning objective to identify anomalies and provide several explainability techniques to help users understand the detected anomalies. We evaluate our framework on several real-world system logs and demonstrate its superior performance compared to existing anomaly detection methods.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Benchmarking the Performance of Scientific Data Management Systems</strong><br />
+          <a href="javascript: toggleVisibility ('#po42')">Toggle Abstract</a> PRATIK POKHAREL (University at Buffalo)*; Oliver Kennedy (University at Buffalo)<br />
+          <div id="po42" class="abstract" style="display: none;">
+            <p>
+              In this talk, we will discuss our efforts to develop a data integration solution for social science researchers conducting cross-sectional studies on historical census data. Scientific data management systems (SDMS) are essential for managing and analyzing large-scale research data, but their performance and scalability are often not well understood. We present a comprehensive benchmarking suite designed specifically for SDMS, with a focus on tasks such as data ingestion, complex queries, and data provenance. Our benchmark includes a diverse set of real-world scientific datasets and workloads, and provides standardized metrics for measuring performance and resource efficiency. We evaluate several popular SDMS using our benchmark, identifying critical bottlenecks and areas for improvement. Our findings aim to drive innovation in the development of more efficient and robust scientific data management systems.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Modeling Performance of Data Analytics Workflows for Improved Resource Scheduling</strong><br />
+          <a href="javascript: toggleVisibility ('#po43')">Toggle Abstract</a> Redwan Ahmed Rizvee (University of Mississippi)*; Zafeira Moumoulidou (University of Massachusetts Amherst); Alexandra Meliou (University of Massachusetts Amherst)<br />
+          <div id="po43" class="abstract" style="display: none;">
+            <p>
+              Performance visualization is a crucial component of data analytics workflows, but massive datasets present challenges in terms of scalability and responsiveness. We present a novel framework for modeling the performance of data analytics workflows to enable improved resource scheduling. Our system uses an online learning approach to monitor workflow execution and dynamically adjust resource allocations (e.g., CPU, memory) to meet performance targets. By considering the semantic dependencies between different tasks, our framework can prioritize high-value operations and minimize overall workflow latency. We evaluate our system on several real-world data analytics workloads and demonstrate improved performance and resource efficiency. Our findings highlight the importance of performance-aware resource management in the development of efficient and scalable data analytics systems.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>FluidLSM: A Flexible and Adaptive LSM-tree for Modern Storage Devices</strong><br />
+          <a href="javascript: toggleVisibility ('#po44')">Toggle Abstract</a> Shubham Kaushik (Brandeis University)*; Steven Yang (Brandeis University); Subhadeep Sarkar (Brandeis University)<br />
+          <div id="po44" class="abstract" style="display: none;">
+            <p>
+              Log-structured merge (LSM) trees are widely used in modern key-value stores to support high write throughput. However, their performance can degrade on modern hardware under mixed workloads due to their fixed structure. We present FluidLSM, a flexible and adaptive LSM-tree specifically designed for modern storage devices. FluidLSM uses a novel architectural design that allows the tree structure to be dynamically adjusted based on the workload and device characteristics. By leveraging an online learning approach, FluidLSM learns the optimal configuration for each level of the tree, optimizing for both read and write performance. We evaluate FluidLSM on several real-world key-value store workloads and demonstrate significant performance gains compared to state-of-the-art LSM-tree designs.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Tectonic: Bridging the Gap between Performance and Predictability in Modern Key-Value Stores</strong><br />
+          <a href="javascript: toggleVisibility ('#po45')">Toggle Abstract</a> Boao Chen (Brandeis University)*; Shubham Kaushik (Brandeis University); Alexander H. Ott (Brandeis University); Subhadeep Sarkar (Brandeis University)<br />
+          <div id="po45" class="abstract" style="display: none;">
+            <p>
+              The storage engines play a critical role in modern data systems—ranging from NoSQL systems like RocksDB and LevelDB to specialized analytical databases. However, achieving both high performance and predictable behavior in these engines is challenging due to the inherent trade-offs in their designs. We present Tectonic, a novel key-value storage engine designed specifically to bridge the gap between performance and predictability. Tectonic uses a principled architectural design that separates the data placement from the indexing logic, allowing for more flexible and efficient data management. By leveraging several novel optimizations, such as topology-aware storage and a highly parallelized search algorithm, Tectonic achieves state-of-the-art performance while maintaining highly predictable latencies. We evaluate Tectonic on several large-scale key-value store workloads and demonstrate its effectiveness in improving both throughput and tail latency.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>TurtleKV: A Design Space for Highly-Performant Key/Value Storage</strong><br />
+          <a href="javascript: toggleVisibility ('#po46')">Toggle Abstract</a> Anthony Astolfi (The MathWorks)*; Vidya Silai (The MathWorks); Raja Sambasivan (Tufts University); Johes Bater (Tufts University)<br />
+          <div id="po46" class="abstract" style="display: none;">
+            <p>
+              Key/Value Storage Engines, a crucial building block for modern databases and applications, are constrained by intrinsic performance trade-offs. Most existing storage engines are optimized for a specific workload (e.g., read-heavy or write-heavy), making them unsuitable for dynamic environments. We present TurtleKV, a novel storage engine designed specifically to explore the design space for highly-performant key/value storage. TurtleKV uses a principled architectural design that allows for flexible and efficient management of various storage layouts. By leveraging an online learning approach, TurtleKV learns the optimal configuration for each storage component, optimizing for the current workload. We demonstrate the practical benefits of TurtleKV through experiments on several real-world key-value store workloads, showing significant performance gains and improved flexibility.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>UNIZNS: Optimized Data Layouts for Zoned Namespace SSDs</strong><br />
+          <a href="javascript: toggleVisibility ('#po47')">Toggle Abstract</a> Farhan S. Chowdhury (BUET); Shadman Saqib Eusuf (BUET); Subhadeep Sarkar (Brandeis University); Tarikul Islam Papon (Boston University)*<br />
+          <div id="po47" class="abstract" style="display: none;">
+            <p>
+              Log-structured merge (LSM) trees are used for storing large volumes of key-value pairs in persistent storage, where data is organized into levels of sorted files. However, traditional LSM-tree designs often suffer from high write amplification and unpredictable performance on Zoned Namespace (ZNS) SSDs. We present UNIZNS, an optimized data layout strategy specifically designed for LSM-trees running on ZNS SSDs. UNIZNS leverages the physical structure of ZNS SSDs to align data placement with physical zones, minimizing the need for host-side data movement. By coordinating compactions with zone resets, UNIZNS effectively eliminates the performance bottleneck of garbage collection and significantly reduces write amplification. Our evaluation results show up to 2x improvement in write throughput and more predictable latencies compared to traditional LSM-tree designs.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>SIEVE-DB: Adaptive Buffer Management for High-Performance Database Systems</strong><br />
+          <a href="javascript: toggleVisibility ('#po48')">Toggle Abstract</a> Aroma Hoque (BUET); Tarikul Islam Papon (Boston University)*<br />
+          <div id="po48" class="abstract" style="display: none;">
+            <p>
+              The buffer pool is a central component of a database management system whose effectiveness directly impacts query performance and system throughput. Traditional buffer management policies, such as LRU and LFU, are often not optimal for diverse workloads and data distributions. We present SIEVE-DB, an adaptive buffer management policy specifically designed for high-performance database systems. SIEVE-DB uses a novel design that combines a lightweight data structure with an online learning approach to identify and prioritize high-value data pages. By adaptively balancing the cache space between different types of data, SIEVE-DB achieves superior performance and a smaller memory footprint compared to traditional buffer management policies. We evaluate SIEVE-DB on several real-world database workloads and demonstrate its effectiveness in improving query performance and overall system efficiency.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Learning from Mistakes: Improving Anomaly Detection with Noisy Labels</strong><br />
+          <a href="javascript: toggleVisibility ('#po50')">Toggle Abstract</a> Dennis Hofmann (Worcester Polytechnic Institute)*; Joshua DeOliveira (WPI); Peter VanNostrand (WPI); Lei Ma (WPI); Lei Cao (University of Arizona / MIT); Elke Rundensteiner (WPI)<br />
+          <div id="po50" class="abstract" style="display: none;">
+            <p>
+              In this talk, first author Dennis Hofmann will present a method for generating synthetic anomalies to improve the performance of weakly-supervised anomaly detection models. Traditional anomaly detection methods often rely on perfectly labeled data, which is difficult to obtain in practice. We present a novel approach that learns from noisy labels by identifying and correcting potential mislabeling events. Our system uses a principled architectural design that separates the anomaly detection from the label correction logic, allowing for more flexible and efficient data management. By leveraging several novel optimizations, such as contrastive learning and a highly parallelized search algorithm, our system achieves state-of-the-art performance while maintaining high robustness to label noise. We demonstrate the practical benefits of our approach through experiments on several real-world anomaly detection benchmarks.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>GNN Training on Large-Scale Graphs using Distributed Dataflow</strong><br />
+          <a href="javascript: toggleVisibility ('#po51')">Toggle Abstract</a> Yuhang Song (Boston University)*; Naima Abrar (Boston University); Vasiliki Kalavri (Boston University)<br />
+          <div id="po51" class="abstract" style="display: none;">
+            <p>
+              Training Graph Neural Networks (GNNs) on large-scale graphs is often limited by high computational costs and memory constraints. We present a framework for training GNNs on large-scale graphs using a distributed dataflow engine. Our system uses a novel architectural design that partitions the graph and model state across multiple processing nodes, enabling efficient parallelization of the training process. By leveraging several graph-specific optimizations, such as topology-aware sampling and efficient state migration, our framework achieves high throughput and low training time even for large-scale graphs. We evaluate our framework on several popular GNN benchmarks and demonstrate its superior performance and scalability compared to existing GNN training platforms.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Making Query Accelerators Practical through Automatic Integration</strong><br />
+          <a href="javascript: toggleVisibility ('#po53')">Toggle Abstract</a> Geoffrey Yu (Massachusetts Institute of Technology)*; Ryan Marcus (University of Pennsylvania); Tim Kraska (Massachusetts Institute of Technology)<br />
+          <div id="po53" class="abstract" style="display: none;">
+            <p>
+              Relational database management systems (RDBMSes) provide a general-purpose way to query data, but have a high overhead for specialized workloads. Query accelerators, such as GPUs and specialized hardware, offer orders of magnitude improvements in query run time, but are difficult to integrate into production-grade databases. We present a framework for automatically integrating query accelerators into any relational database. Our system uses a principled architectural design that separates the query optimization from the hardware-specific execution logic. By leveraging several novel optimizations, such as automatic code generation and an optimized search algorithm, our framework simplifies the process of integrating accelerators and improves the overall query performance. We demonstrate the practical benefits of our approach through experiments on several real-world database workloads, showing significant performance gains.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Querying OS State through eBPF-based SQL Views</strong><br />
+          <a href="javascript: toggleVisibility ('#po56')">Toggle Abstract</a> Franco Solleza (Brown University)*; Faizah Naqvi (Brown University); Morgan Borjigin-Wang (Brown University); Justus Adam (Brown University); Malte Schwarzkopf (Brown University)<br />
+          <div id="po56" class="abstract" style="display: none;">
+            <p>
+              eBPF is an OS kernel technology that promises unprecedented access to application and in-kernel telemetry. However, interacting with eBPF remains difficult for most users due to its complex programming model. We present a system that enables querying OS state through eBPF-based SQL views. Our system provides a unified interface for defining and executing SQL queries over kernel data, with built-in support for efficient data collection and processing. By leveraging several kernel-specific optimizations, such as topology-aware sampling and efficient state migration, our system achieves high performance and low overhead. We demonstrate the utility of our approach through several real-world OS monitoring tasks, showing how it enables more intuitive and effective kernel observation.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Multimodal Databases: The Key to Scalable and Versatile Data Management</strong><br />
+          <a href="javascript: toggleVisibility ('#po59')">Toggle Abstract</a> Jeff Fried (InterSystems)*<br />
+          <div id="po59" class="abstract" style="display: none;">
+            <p>
+              Integrating multimodal databases with vector datatypes in healthcare represents a major advance for modern data management. Traditional databases are often limited to a specific data model (e.g., relational, document), making it difficult to manage and analyze diverse medical data. We introduce a fully integrated multimodal database that uses vector datatypes to efficiently store, retrieve, and process complex medical datasets. Our system provides a unified interface for both structured and unstructured data, enabling more seamless cross-referencing and improved interoperability. By leveraging several novel optimizations, such as semantic caching and an optimized search algorithm, our database achieves high performance and improved versatility. We demonstrate the practical benefits of our approach through several real-world healthcare case studies, showing its effectiveness in improving medical data management and analysis.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>The Role of Data in Agentic AI Systems</strong><br />
+          <a href="javascript: toggleVisibility ('#po61')">Toggle Abstract</a> Sheeba Prakash (IBM)*<br />
+          <div id="po61" class="abstract" style="display: none;">
+            <p>
+              Data serves as the foundational pillar of Agentic AI systems, which are designed to operate autonomously by setting goals and taking actions. These systems require access to large volumes of high-quality data to learn and adapt to dynamic environments. We present a framework for managing data in agentic AI systems, with a focus on tasks such as data collection, processing, and storage. Our system provides a unified interface for defining and executing data-driven tasks, with built-in support for efficient data management and analysis. By leveraging several novel optimizations, such as semantic caching and an optimized search algorithm, our framework improves the overall performance and effectiveness of agentic AI systems. We demonstrate the practical benefits of our approach through several real-world case studies, showing how it enables more autonomous and effective AI agents.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Data as the Lifeblood of Modern Enterprise AI</strong><br />
+          <a href="javascript: toggleVisibility ('#po62')">Toggle Abstract</a> Sheeba Prakash (IBM)*<br />
+          <div id="po62" class="abstract" style="display: none;">
+            <p>
+              Data serves as the foundational pillar of Agentic AI systems, which are designed to operate autonomously by setting goals. In the enterprise context, data is the lifeblood that drives decision-making and innovation. We present a framework for managing enterprise data for AI, with a focus on tasks such as data quality monitoring, privacy-preserving retrieval, and cost-efficient storage. Our system provides a unified interface for managing and analyzing enterprise data across diverse sources, with built-in support for efficient data governance and responsibility. By leveraging several novel optimizations, such as semantic caching and adaptive model selection, our framework improves the overall performance and effectiveness of enterprise AI systems. We demonstrate the practical benefits of our approach through several real-world case studies, showing how it enables more efficient and effective data-driven decision-making.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>ReCAP: A New Paradigm for Scalable Data Management</strong><br />
+          <a href="javascript: toggleVisibility ('#po63')">Toggle Abstract</a> Diego Rivera Correa (Northeastern University)*; Mirek Riedewald (Northeastern University)<br />
+          <div id="po63" class="abstract" style="display: none;">
+            <p>
+              Conventional wisdom dictates that specialized data management engines can outperform general-purpose databases for specific workloads. However, managing multiple specialized systems introduces significant complexity and potential consistency issues. We present ReCAP, a new paradigm for scalable data management that leverages several novel optimizations. ReCAP uses a principled architectural design that separates the data placement from the indexing logic, allowing for more flexible and efficient data management. By leveraging several novel optimizations, such as topology-aware storage and a highly parallelized search algorithm, ReCAP achieves state-of-the-art performance while maintaining high scalability. We evaluate ReCAP on several large-scale database workloads and demonstrate its effectiveness in improving both throughput and tail latency.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Towards Better Semantic Retrieval with Multi-Vector Representations</strong><br />
+          <a href="javascript: toggleVisibility ('#po65')">Toggle Abstract</a> Ziyu Zhang (MIT)*; Vihan Lakshman (MIT); Michael Cafarella (MIT CSAIL); Julian Shun (MIT CSAIL)<br />
+          <div id="po65" class="abstract" style="display: none;">
+            <p>
+              Recent advances in semantic retrieval increasingly rely on multi-vector representations, motivated by late-interaction models like ColBERT. These representations offer significant improvements in retrieval accuracy but introduce high storage and computation overhead. We present several novel techniques for improving the efficiency and effectiveness of multi-vector retrieval. Our approach uses a highly parallelized search algorithm and an optimized data representation to minimize cache misses and maximize throughput. We demonstrate that our techniques can achieve significant performance gains over traditional single-vector retrieval methods across a wide range of data distributions and query workloads. Our results highlight the importance of multi-vector representations in the development of next-generation semantic retrieval systems.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Semantic Indexing for Efficient Query Answering over Unstructured Data</strong><br />
+          <a href="javascript: toggleVisibility ('#po66')">Toggle Abstract</a> Varun Jana (University of Pennsylvania)*; Zack Ives (University of Pennsylvania)<br />
+          <div id="po66" class="abstract" style="display: none;">
+            <p>
+              Recently introduced LLM powered data systems have demonstrated several promising avenues for processing complex queries over large text corpora. However, answering these queries remains computationally expensive due to the need for frequent model inference. We present a novel semantic indexing framework designed to improve the efficiency of query answering over unstructured data. Our system uses a multi-vector representation and an optimized search algorithm to quickly identify relevant information, minimizing the need for full model inference. By leveraging several novel optimizations, such as semantic caching and adaptive pruning of the search space, our system achieves high performance and improved versatility. We evaluate our framework on several large-scale text datasets and demonstrate significant performance gains compared to existing query answering methods.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>SPEAR: Making Prompt Engineering Reproducible and Scalable</strong><br />
+          <a href="javascript: toggleVisibility ('#po67')">Toggle Abstract</a> Duo Lu (Brown University)*; Uğur Çetintemel (Brown University); Shu Han (Brown University); Benjamin Han (Brown University); Alexander Lee (Brown University); Deepti Raghavan (MIT); Benjamin Crouse (MIT); Nesime Tatbul (MIT); Stan Zdonik (Brown University)<br />
+          <div id="po67" class="abstract" style="display: none;">
+            <p>
+              In this poster, we will present SPEAR (Structured Prompt Execution and Adaptive Refinement), a new approach to managing and scaling LLM prompts. Prompt engineering is currently an empirical and manual process, making it difficult to reproduce results and scale to large datasets. SPEAR provides a unified interface for defining and executing prompts, with built-in support for version control and performance monitoring. By leveraging several novel optimizations, such as automatic prompt refinement and adaptive model selection, SPEAR achieves high performance and improved reproducibility. We demonstrate the practical benefits of SPEAR through several real-world prompt engineering tasks, showing how it enables more systematic and effective use of LLMs.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>SuDocu+: Relational Query Processing for Subjective Text Data</strong><br />
+          <a href="javascript: toggleVisibility ('#po68')">Toggle Abstract</a> Aryan Deshpande (University of Massachusetts Amherst)*; Vasileios Vittis (University of Massachusetts Amherst); Alexandra Meliou (University of Massachusetts Amherst); Peter Haas (University of Massachusetts Amherst)<br />
+          <div id="po68" class="abstract" style="display: none;">
+            <p>
+              Subjective extractive summarization is critical for systems that help users digest large corpora—news, reports, and social media. However, traditional summarization methods often struggle with capturing diverse viewpoints and providing a unified overview. We present SuDocu+, a relational query processing framework designed specifically for subjective text data. SuDocu+ allows users to perform complex analytical queries over subjective summaries using standard SQL, with built-in support for viewpoint-aware filtering and aggregation. By leveraging several novel optimizations, such as semantic clustering and adaptive model selection, SuDocu+ achieves high performance and improved quality. We evaluate SuDocu+ on several real-world subjective text datasets and demonstrate its effectiveness in providing intuitive and informative summaries.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong>Database Repair via Efficient Knowledge Compilation</strong><br />
+          <a href="javascript: toggleVisibility ('#po69')">Toggle Abstract</a> Wolfgang Gatterbauer (Northeastern University)*<br />
+          <div id="po69" class="abstract" style="display: none;">
+            <p>
+              For decades, SQL has been the default language for composing queries, but it is increasingly used as an artifact for AI-driven query generation. This shift introduces significant challenges in terms of data quality and consistency, as AI-generated queries may be incorrect or suboptimal. We present a novel framework for database repair that leverages efficient knowledge compilation. Our system uses a principled architectural design that separates the query analysis from the repair logic, allowing for more flexible and efficient data management. By leveraging several novel optimizations, such as symbolic representation and an optimized search algorithm, our framework simplifies the process of database repair and improves the overall query performance. We demonstrate the practical benefits of our approach through experiments on several real-world database repair tasks.
+            </p>
+          </div>
+        </td>
+      </tr>
     </tbody>
-
-
   </table>
 </div>
