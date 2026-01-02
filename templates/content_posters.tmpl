@@ -22,15 +22,15 @@
 
   <h3>List of accepted posters:</h3>
   <br />
-  <table>
+  <table class="table table-bordered posterTable">
     <tbody>
       <tr>
         <td>
           <strong>The Neural-Symbolic Query Fabric: Weaving Machine Learning into the Core of Database Operations</strong><br />
-          <a href="javascript: toggleVisibility ('#po2')">Toggle Abstract</a> Kathiresan Jayabalan (IEEE)*<br />
+          <a href="javascript: toggleVisibility ('#po2')">Toggle Abstract</a> Kathiresan Jayabalan (Mastercard)*; Anand Chinnakannan (Walmart)<br />
           <div id="po2" class="abstract" style="display: none;">
             <p>
-              The traditional divide between machine learning (ML) and database systems is becoming a critical bottleneck. Databases manage data with precision but lack learned intelligence, while ML models offer predictive power but operate as stateless, external black boxes. We propose the Neural-Symbolic Query Fabric (NSQF), a new architecture that embeds ML models directly into the database engine’s physical operators. By representing model weights as first-class relational data and execution as algebraic transformations, NSQF enables end-to-end differentiability across the entire query plan. This allows the database to not only query data but to learn optimal physical representations and join orders dynamically. Initial benchmarks show that NSQF reduces the overhead of cross-system data movement by up to 10x while enabling complex AI-driven analytical queries to be expressed in standard SQL.
+              The traditional divide between machine learning (ML) and database systems is becoming a critical bottleneck. Databases manage data with precision but lack learned intelligence, while ML models offer predictive power but operate as stateless, external black boxes. We propose the Neural-Symbolic Query Fabric (NSQF), a new architecture that embeds ML models directly into the database engine’s physical operators. By representing model weights as first-class relational data and execution as algebraic transformations, NSQF enables end-to-end differentiability across the entire query plan. Initial benchmarks show that NSQF reduces the overhead of cross-system data movement by up to 10x while enabling complex AI-driven analytical queries to be expressed in standard SQL.
             </p>
           </div>
         </td>
@@ -279,7 +279,7 @@
       <tr>
         <td>
           <strong>Jasper: An Efficient Approximate Nearest Neighbor Search over Streaming Data</strong><br />
-          <a href="javascript: toggleVisibility ('#po27')">Toggle Abstract</a> Hunter McCoy (Northeastern University)*; Zikai Wang (Northeastern University); Prashant Pandey (Northeastern University)<br />
+          <a href="javascript: toggleVisibility ('#po27')">Toggle Abstract</a> Hunter McCoy (Northeastern University)*; Zikun Wang (Northeastern University); Prashant Pandey (Northeastern University)<br />
           <div id="po27" class="abstract" style="display: none;">
             <p>
               Approximate nearest neighbor search (ANNS) is fundamental to modern information retrieval and recommendation systems. However, performing ANNS over rapidly evolving streaming data remains a major challenge, as traditional static indexes cannot handle high-frequency updates. We present Jasper, an efficient ANNS index specifically designed for streaming vector data. Jasper uses a novel dynamic graph-based structure that supports both low-latency queries and high-throughput updates. By leveraging an incremental indexing strategy and efficient pruning of the search space, Jasper maintains high recall even in the presence of continuous data ingestion. We evaluate Jasper on several large-scale streaming datasets and demonstrate that it outperforms existing streaming ANNS methods by up to 10x in terms of update throughput while maintaining competitive query performance.
@@ -303,7 +303,7 @@
       <tr>
         <td>
           <strong>Streaming Graph Neural Networks for Fraud Detection and Traffic Analysis</strong><br />
-          <a href="javascript: toggleVisibility ('#po29')">Toggle Abstract</a> Naima Abrar Shami (Boston University)*; Shami, Naima Abrar*; Song, Yuhang; Sharma, Sakshi; Huang, Lei; Kalavri, Vasiliki<br />
+          <a href="javascript: toggleVisibility ('#po29')">Toggle Abstract</a> Naima Abrar Shami (Boston University)*; Song, Yuhang; Sharma, Sakshi; Huang, Lei; Kalavri, Vasiliki<br />
           <div id="po29" class="abstract" style="display: none;">
             <p>
               Graph Neural Networks (GNNs) are effective for tasks such as fraud detection, recommendation, and traffic analysis. However, training and serving GNNs on large, rapidly changing graphs is computationally expensive and difficult to scale. We present a framework for streaming GNNs that enables real-time model updates and low-latency inference on dynamic graphs. Our system uses a distributed dataflow engine to manage graph state and perform model training in an incremental fashion. By leveraging several graph-specific optimizations, such as topology-aware sampling and efficient state migration, we achieve high throughput and low latency even for large-scale graphs with high update rates. We evaluate our framework on several fraud detection and traffic analysis benchmarks, demonstrating its effectiveness in real-time scenarios.
@@ -339,7 +339,7 @@
       <tr>
         <td>
           <strong>Fishing in Deep Water: Robust Consensus in Adversarial Environments</strong><br />
-          <a href="javascript: toggleVisibility ('#po34')">Toggle Abstract</a> Mohammad Javad Amiri (Stony Brook University)*; Ilia Mirzaei (Stony Brook University); Amiri, Mohammad Javad<br />
+          <a href="javascript: toggleVisibility ('#po34')">Toggle Abstract</a> Mohammad Javad Amiri (Stony Brook University)*; Ilia Mirzaei (Stony Brook University)<br />
           <div id="po34" class="abstract" style="display: none;">
             <p>
               Distributed data management systems increasingly operate in untrusted environments, making them susceptible to adversarial attacks. We present a robust consensus protocol designed specifically for adversarial environments. Our protocol leverages several cryptographic primitives and a novel fault-detection mechanism to ensure consistency even in the presence of malicious nodes. By dynamically adjusting its consensus strategy based on the detected threat level, our protocol maintains high performance under normal conditions and gracefully degrades under attack. We provide a detailed security analysis and demonstrate the practical robustness of our protocol through experiments on a distributed testbed. Our findings highlight the importance of security-aware protocol design in the development of trustworthy distributed data systems.
@@ -426,7 +426,7 @@
           <a href="javascript: toggleVisibility ('#po43')">Toggle Abstract</a> Redwan Ahmed Rizvee (University of Mississippi)*; Zafeira Moumoulidou (University of Massachusetts Amherst); Alexandra Meliou (University of Massachusetts Amherst)<br />
           <div id="po43" class="abstract" style="display: none;">
             <p>
-              Performance visualization is a crucial component of data analytics workflows, but massive datasets present challenges in terms of scalability and responsiveness. We present a novel framework for modeling the performance of data analytics workflows to enable improved resource scheduling. Our system uses an online learning approach to monitor workflow execution and dynamically adjust resource allocations (e.g., CPU, memory) to meet performance targets. By considering the semantic dependencies between different tasks, our framework can prioritize high-value operations and minimize overall workflow latency. We evaluate our system on several real-world data analytics workloads and demonstrate improved performance and resource efficiency. Our findings highlight the importance of performance-aware resource management in the development of efficient and scalable data analytics systems.
+              Performance visualization is a prestigious component of data analytics workflows, but massive datasets present challenges in terms of scalability and responsiveness. We present a novel framework for modeling the performance of data analytics workflows to enable improved resource scheduling. Our system uses an online learning approach to monitor workflow execution and dynamically adjust resource allocations (e.g., CPU, memory) to meet performance targets. By considering the semantic dependencies between different tasks, our framework can prioritize high-value operations and minimize overall workflow latency. We evaluate our system on several real-world data analytics workloads and demonstrate improved performance and resource efficiency. Our findings highlight the importance of performance-aware resource management in the development of efficient and scalable data analytics systems.
             </p>
           </div>
         </td>
