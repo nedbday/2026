@@ -966,3 +966,22 @@ With advances in large language models (LLMs), researchers are creating new syst
                </div>
         </td>
       </tr>
+
+                  <tr>
+                <td style="text-align: center; vertical-align: top;">71</td>
+        <td>
+          <strong>Cost-Aware Hybrid Search with Automated Design of Metadata for NL Queries</strong><br />
+          <a href="javascript: toggleVisibility ('#po71')">Toggle Abstract</a> Zhuohan Gu (MIT CSAIL)*
+Matthew Russo (MIT CSAIL); 
+Joyce Qu (MIT CSAIL); 
+Omar Khattab (MIT CSAIL); 
+Tim Kraska (MIT CSAIL); 
+Tianyu Li (MIT CSAIL); 
+Samuel Madden (MIT CSAIL)
+<br />
+          <div id="po71" class="abstract" style="display: none;">
+            <p>
+Automatically designing the metadata and query planning that underpin hybrid search for natural-language queries is a non-trivial task. A judicious design must be cost-driven, informed by the workload, and able to exploit both structural and semantic regularities in the corpus. Today’s vector databases and LLM-based retrieval stacks expose dense or sparse similarity search with optional metadata filters, but leave practitioners to handcraft schemas, populate attributes, and manually stitch together keyword, vector, and filter operators. As a result, complex information needs that mix fuzzy semantics with precise constraints and set operations are often served by ad hoc pipelines that are difficult to tune, brittle under workload drift, and expensive to operate. In this work, we present Nous, the first end-to-end system that automates the heavy lifting of hybrid search: it automatically extracts and materializes structural and semantic metadata, builds and maintains the corresponding index portfolio, caches and reuses hybrid query plans to keep LLMs out of the critical path, and adapts its design based on observed cost signals.
+               </div>
+        </td>
+      </tr>
