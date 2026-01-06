@@ -53,6 +53,16 @@
         <td>9:00 - 9:30</td>
         <td><strong>Keynote 1: </strong>
            Nesime Tatbul (Intel/MIT) <br> <i>TBD</i>
+                     <br/>
+          <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle abstract and bio.</a>
+          <div id="keynote1A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Nesime Tatbul </b> 
+          </div>
           </td>
       </tr>
 
@@ -154,7 +164,20 @@ Key/Value Storage Engines, a crucial building block for modern databases and app
       <tr>
         <td>11:00 - 11:30</td>
         <td><strong>Keynote 2: </strong>
-           Ippokratis Pandis   (Databricks) <br> <i>TBD</i>
+           Ippokratis Pandis   (Databricks) <br> <i>Evolving Databases for the Cloud and AI era.</i>
+                                <br/>
+          <a href="javascript: toggleVisibility ('#keynote2A')">Click to toggle abstract and bio.</a>
+          <div id="keynote2A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              In this presentation, we are going to talk about Lakebase, a vision for the next generation of cloud-based agent-enabled OLTP systems. After the dramatic transformation of analytics (OLAP) platforms over the past one to two decades—with innovations such as columnar storage, vectorized execution, streaming, and the Lakehouse architecture—we argue that databases (OLTP) are now at an inflection point. We will explore how cloud-native infrastructure, new workload requirements, and the rise of AI are reshaping what transactional systems must deliver. Lakebase extends the key principles that made the Lakehouse successful—decoupled compute and storage, open formats, and cross-engine interoperability—to OLTP workloads, enabling a modern, scalable, and open architecture designed for the cloud and AI era.
+              </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Ippokratis Pandis  </b> is a Distinguished Engineer at Databricks with a background in database systems. Ippokratis spent over a decade helping shape AWS Analytics and Amazon Redshift in particular as VP/Distinguished Engineer, and before that he worked on Cloudera Impala and IBM DB2 BLU. He holds a Ph.D. from Carnegie Mellon University on multicore transaction processing and has contributed to both industry and academic communities around large-scale data management. He is currently the President of HPTS and served as General Chair of SIGMOD 2023.
+          </div>
+          </td>
+      </tr>
           </td>
       </tr>
 
@@ -279,8 +302,10 @@ Image AI has the potential to improve every aspect of human life. Image AI, howe
 <br />
           <div id="po69" class="abstract" style="display: none;">
             <p>
-For decades, SQL has been the default language for composing queries, but it is increasingly used as an artifact to be read and verified rather than authored. With Large Language Models (LLMs), queries are increasingly machine-generated, while humans read, validate, and debug them. This shift turns relational query languages into interfaces for back-and-forth communication about intent, which will lead to a rethinking of relational language and interface design. <br/><br/>We argue that this rethinking needs support from an Abstract Relational Query Language (ARQL): a semantics-first reference metalanguage that separates query intent from user-facing syntax and makes underlying relational patterns explicit and comparable across user-facing languages. An ARQL separates a query into (𝑖) a relational core (the compositional structure that determines intent), (𝑖𝑖) modalities (alternative representations of that core tailored to different audiences), and (𝑖𝑖𝑖) conventions (orthogonal environment-level semantic parameters under which the core is interpreted, e.g., set vs. bag semantics, or treatment of null values). Usability for humans or machines then depends less on choosing a particular language and more on choosing an appropriate modality. Comparing languages becomes a question of which relational patterns they support and what conventions they choose.<br/><br/>We present Abstract Relational Calculus (ARC), a strict generalization of Tuple Relational Calculus (TRC), as an instance of ARQL. ARC comes in three modalities: (𝑖) a comprehension-style textual notation, (𝑖𝑖) an Abstract Language Tree (ALT) for machine reasoning about meaning, and (𝑖𝑖𝑖) a diagrammatic hierarchical-graph (higraph) representation for humans. ARC provides the missing vocabulary and acts as a Rosetta Stone for relational querying. Because its ALT makes binding, scoping, and grouping structure explicit in a small, reusable operator vocabulary, it is a natural intermediate target for automated query generation and validation, including NL2SQL systems that translate natural language into a semantic query representation and then render it to SQL.
-              </div>
+Humans increasingly avoid writing SQL from scratch. Instead, they read, interpret and edit queries drafted by AI assistants. As a result, queries are less a fixed, non-negotiable specification and more a malleable medium for surfacing ambiguities and interactively converging on an intended meaning.
+
+We believe this human-AI generate-and-review loop calls for an Abstract Relational Query Language (ARQL): a semantics-first metalanguage that cleanly separates intent from surface syntax and makes relational patterns comparable across languages. We present Abstract Relational Calculus (ARC), a generalization of tuple relational calculus that decomposes queries into a relational core, audience-specific modalities, and explicit conventions. ARC serves as a shared semantic reference (a "Rosetta Stone") for relational language and interface design, including NL2SQL.
+               </div>
         </td>
       </tr>
           </td>
@@ -323,7 +348,18 @@ In this talk, Nina Klimenkova, one of the first authors, will present a study th
       <tr>
         <td>2:45 - 3:15</td>
         <td><strong>Keynote 3: </strong>
-           Ryan Marcus (University of Pennsylvania) <br> <i>TBD</i>
+           Ryan Marcus (University of Pennsylvania) <br> <i>Next Steps for Learned Query Optimization</i>
+                     <br/>
+          <a href="javascript: toggleVisibility ('#keynote3A')">Click to toggle abstract and bio.</a>
+          <div id="keynote3A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              Since 2018, the database community has found a myriad of ways to use reinforcement learning (RL) for query planning. While scientifically interesting and an important step forward, these techniques (including my own) failed to see much adoption in industry due to their sample inefficiency, unpredictable behavior, and added critical path complexity. Our lab's recent work has circumvented this problem in two ways. First, we show that one can pull RL "up," using RL to optimize an entire query workload offline, and then using only verified query plans at runtime. Second, we show that one can push RL "down" into the execution engine itself, where each morsel becomes a sample and incorrect decisions are "learned away" during the execution of a single query. We believe both of these directions are promising, and show some preliminary evidence from industry for the first proposal. 
+              </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Ryan Marcus </b> is an assistant professor at the University of Pennsylvania, where he focuses on using machine learning to build the next generation of data management tools that automatically adapt to new hardware and user workloads, invent novel processing strategies, and understand user intention. Prior to Penn, Ryan was a postdoc at MIT (supervised by Tim Kraska), and received his PhD from Brandeis University (advised by Olga Papaemmanouil). Ryan has also held research positions at Amazon, Intel Labs, and the Los Alamos National Laboratory. 
+          </div>
           </td>
       </tr>
 
