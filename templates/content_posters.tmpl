@@ -266,7 +266,7 @@ Manos Athanassoulis (Boston University)
         </td>
       </tr>
 
-                <tr>
+                <!-- <tr>
                     <td style="text-align: center; vertical-align: top;">23</td>
         <td>
           <strong>Bringing Vector Search to OLTP</strong><br />
@@ -277,7 +277,7 @@ Manos Athanassoulis (Boston University)
             This poster presents the design and implementation of a fully-transactional and highly-performant Approximate Nearest Neighbor (ANN) vector search feature in Google Cloud SQL for MySQL. We address the fundamental challenges of integrating an in-memory ANN library, Scalable Nearest Neighbors (ScaNN), into an ACID-compliant, multi-version concurrency control (MVCC) environment, delivering a solution that is both powerful and seamlessly integrated for MySQL users.
             </div>
         </td>
-      </tr>
+      </tr> -->
 
                 <tr>
                     <td style="text-align: center; vertical-align: top;">24</td>
@@ -983,5 +983,19 @@ Samuel Madden (MIT CSAIL)
             <p>
 Automatically designing the metadata and query planning that underpin hybrid search for natural-language queries is a non-trivial task. A judicious design must be cost-driven, informed by the workload, and able to exploit both structural and semantic regularities in the corpus. Today’s vector databases and LLM-based retrieval stacks expose dense or sparse similarity search with optional metadata filters, but leave practitioners to handcraft schemas, populate attributes, and manually stitch together keyword, vector, and filter operators. As a result, complex information needs that mix fuzzy semantics with precise constraints and set operations are often served by ad hoc pipelines that are difficult to tune, brittle under workload drift, and expensive to operate. In this work, we present Nous, the first end-to-end system that automates the heavy lifting of hybrid search: it automatically extracts and materializes structural and semantic metadata, builds and maintains the corresponding index portfolio, caches and reuses hybrid query plans to keep LLMs out of the critical path, and adapts its design based on observed cost signals.
                </div>
+        </td>
+      </tr>
+
+                  <tr>
+                <td style="text-align: center; vertical-align: top;">72</td>
+        <td>
+          <strong>Workload cost modeling approach to choose table format on IBM Warehouses</strong><br />
+          <a href="javascript: toggleVisibility ('#po72')">Toggle Abstract</a> Brajesh Pandey (IBM)*; 
+Venkatesh Gopal (IBM)
+<br />
+          <div id="po72" class="abstract" style="display: none;">
+            <p>
+Warehouses are central to Enterprise Data Processing needs. Data has become more Open in nature and does not often reside within Warehouses anymore. This makes it key for Warehousing to not only optimally process data that resides in a warehouse, but at the same time integrate and easily access Open File and Open Table Formats , not compromising on performance aspects. The speed at which table metadata can be retrieved and utilized, governs performance of a query execution where metadata processing time heavily depends on the type of table format that was used to store the metadata. Select a table format for high performant metadata planning over a data lake table. Take a workload cost modeling approach to choose table format for high performant query planning in a Lakehouse system. For given table format identify best fit engine to optimize cost in Cloud deployments. IBM Warehouse offerings Db2 and Netezza have introduced several capabilities over the past few years that makes them a favorable choice in Warehousing.
+          </div>
         </td>
       </tr>
