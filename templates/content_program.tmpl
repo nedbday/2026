@@ -64,7 +64,7 @@
             <h3>Bio</h3>
             <p>
               <b>Nesime Tatbul </b> is a Senior Staff Research Scientist at Intel. For the last 10+ years, she has been based at MIT, overseeing Intel's university research programs on data systems and artificial intelligence. Previously, she received a Ph.D. from Brown University and held a faculty position at ETH Zurich. Her research contributions in data stream systems, time series analytics, and learned data management have been widely cited and recognized by awards. Nesime is an ACM Distinguished Member, an IEEE Senior Member, and a Trustee Emeritus of the VLDB Endowment.
-              
+
           </div>
           </td>
       </tr>
@@ -305,10 +305,27 @@ Image AI has the potential to improve every aspect of human life. Image AI, howe
 <br />
           <div id="po69" class="abstract" style="display: none;">
             <p>
-Humans increasingly avoid writing SQL from scratch. Instead, they read, interpret and edit queries drafted by AI assistants. As a result, queries are less a fixed, non-negotiable specification and more a malleable medium for surfacing ambiguities and interactively converging on an intended meaning.
+Practitioners increasingly avoid writing SQL from scratch. Instead, they read, interpret and edit queries drafted by AI assistants. As a result, queries are no longer a fixed, non-negotiable specification, and more a malleable medium for surfacing ambiguities and interactively converging on an intended meaning. We argue that rethinking future interfaces for this human-AI generate-and-review loop calls for an Abstract Relational Query Language (ARQL): a semantics-first metalanguage that cleanly separates intent from surface syntax and makes relational patterns comparable across languages. 
 
-We believe this human-AI generate-and-review loop calls for an Abstract Relational Query Language (ARQL): a semantics-first metalanguage that cleanly separates intent from surface syntax and makes relational patterns comparable across languages. We present Abstract Relational Calculus (ARC), a generalization of tuple relational calculus that decomposes queries into a relational core, audience-specific modalities, and explicit conventions. ARC serves as a shared semantic reference (a "Rosetta Stone") for relational language and interface design, including NL2SQL.
-               </div>
+We present Abstract Relational Calculus (ARC), a generalization of tuple relational calculus (TRC) that decomposes queries into a (1) relational core, (2) audience-specific modalities (humans vs. machines), and (3) explicit conventions. ARC serves as a shared semantic reference (a "Rosetta Stone") for relational language and interface design, including NL2SQL.
+
+This separation lets us revisit two long-standing claims in relational language design: (1) that pipeline-style languages are inherently more intuitive than SQL's (or TRC's) "inside-out" dataflow, and (2) that pipelines are inherently more reusable. Using our vocabulary and ARC as reference language, we show that cognitive load (and thus perceived intuitiveness when reading queries) is primarily a matter of modality rather than "inside-out" vs. linear flow, and that we can achieve modularity and composition even for "inside-out" by using abstract relations.
+<br />
+<br />
+RELEVANT PAPERS
+<br />
+* Database Research needs an Abstract Relational Query Language, CIDR 2026. 
+  <a href="https://www.vldb.org/cidrdb/papers/2026/p27-gatterbauer.pdf">[Link]</a> <br />
+* A Principled Solution to the Disjunction Problem of Diagrammatic Query Representations, SIGMOD 2026 (to appear) 
+  <a href="https://arxiv.org/pdf/2412.08583">[Link]</a> <br />
+* Relational Diagrams and the Pattern Expressiveness of Relational Languages, SIGMOD record 2025. 
+  <a href="https://sigmodrecord.org/?smd_process_download=1&download_id=14010">[Link]</a> <br />
+<br />
+PROJECT PAGE
+<br />
+<a href="https://relationaldiagrams.com/">relationaldiagrams.com</a>
+            </div>
+
         </td>
       </tr>
           </td>
