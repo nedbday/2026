@@ -130,12 +130,13 @@ Key/Value Storage Engines, a crucial building block for modern databases and app
         <td>
                 
       
-          <i>TBD</i><br />
-          TBD (TBD)*<br />
+          <i>Architecting Distributed Systems with DynamoDB: A Production Perspective</i><br />
+          Tejas Pravinbhai Patel (Amazon)*<br />
           <a href="javascript: toggleVisibility ('#po7')">Click to Toggle Abstract</a> 
           <div id="po7" class="abstract" style="display: none;">
             <p>
-              TBD
+              As cloud-native applications scale globally, architectural decisions around distributed NoSQL databases become critical to system reliability, performance, and cost efficiency. 
+              This talk presents theoretical foundations and practical engineering insights from building production-scale distributed systems at Amazon, focusing on DynamoDB as a cornerstone of modern cloud architecture. We explore how DynamoDB's design principles align with classical distributed database concepts while addressing real-world implementation challenges.<br/>DynamoDB provides single-digit millisecond performance at virtually any scale, yet achieving optimal performance, cost efficiency, and global availability requires deep understanding of distributed systems theory and practical architectural nuances. This talk bridges this gap through research-backed approaches validated in production deployments serving millions of requests per second.<br/>DISTRIBUTED SYSTEMS ARCHITECTURE<br/>We examine DynamoDB's architecture through distributed systems principles. Hash-based partitioning strategies demonstrate how partition key design affects throughput—improper selection creates hot partitions reducing effective throughput by up to 80%, while optimized designs achieve near-linear scalability. We analyze consistency models through the CAP theorem lens, presenting latency measurements showing eventual consistency reads exhibit 2-3x lower latency in cross-region scenarios while maintaining sub-second convergence for 99.9% of operations. Fault injection experiments demonstrate replication resilience across Availability Zones and Regions.<br/>MULTI-REGION ARCHITECTURES<br/>Multi-region architectures require sophisticated strategies. We present Global Tables architecture with conflict resolution using last-writer-wins and vector clocks, demonstrating cross-region replication characteristics (p50: 0.8s, p99: 2.1s). Active-active versus active-passive deployment patterns are compared, with case studies showing production systems handling region-wide outages with RPO under 1 second and RTO under 30 seconds. Geographic data routing with Route 53 latency-based routing demonstrates 45-60% latency improvements for distributed user bases.<br/>INTEGRATION PATTERNS<br/>Integration patterns address real-world system complexity. DynamoDB Streams with Lambda enable event-driven architectures processing 100K+ events/second. DAX integration provides 10x latency reduction for read-heavy workloads. We present microservices patterns including distributed tracing with X-Ray, transactional boundaries using DynamoDB Transactions, and polyglot persistence strategies combining DynamoDB with RDS and S3 based on access patterns and consistency requirements.
           </div>
           </td>
         
