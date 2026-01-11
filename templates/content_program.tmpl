@@ -129,18 +129,19 @@ Key/Value Storage Engines, a crucial building block for modern databases and app
         <td>10:15 - 10:30</td>
         <td>
                 
-      
-          <i>Architecting Distributed Systems with DynamoDB: A Production Perspective</i><br />
-          Tejas Pravinbhai Patel (Amazon)*<br />
-          <a href="javascript: toggleVisibility ('#po7')">Click to Toggle Abstract</a> 
-          <div id="po7" class="abstract" style="display: none;">
+
+          <i>Meeting Latency SLOs on Cloud Data Warehouses</i><br />
+          <a href="javascript: toggleVisibility ('#po20')">Click to Toggle Abstract</a> Markos Markakis (Massachusetts Institute of Technology)*; 
+Ziniu Wu (Massachusetts Institute of Technology); 
+Tim Kraska (Massachusetts Institute of Technology)
+<br />
+          <div id="po20" class="abstract" style="display: none;">
             <p>
-              As cloud-native applications scale globally, architectural decisions around distributed NoSQL databases become critical to system reliability, performance, and cost efficiency. 
-              This talk presents theoretical foundations and practical engineering insights from building production-scale distributed systems at Amazon, focusing on DynamoDB as a cornerstone of modern cloud architecture. We explore how DynamoDB's design principles align with classical distributed database concepts while addressing real-world implementation challenges.<br/>DynamoDB provides single-digit millisecond performance at virtually any scale, yet achieving optimal performance, cost efficiency, and global availability requires deep understanding of distributed systems theory and practical architectural nuances. This talk bridges this gap through research-backed approaches validated in production deployments serving millions of requests per second.<br/>DISTRIBUTED SYSTEMS ARCHITECTURE<br/>We examine DynamoDB's architecture through distributed systems principles. Hash-based partitioning strategies demonstrate how partition key design affects throughput—improper selection creates hot partitions reducing effective throughput by up to 80%, while optimized designs achieve near-linear scalability. We analyze consistency models through the CAP theorem lens, presenting latency measurements showing eventual consistency reads exhibit 2-3x lower latency in cross-region scenarios while maintaining sub-second convergence for 99.9% of operations. Fault injection experiments demonstrate replication resilience across Availability Zones and Regions.<br/>MULTI-REGION ARCHITECTURES<br/>Multi-region architectures require sophisticated strategies. We present Global Tables architecture with conflict resolution using last-writer-wins and vector clocks, demonstrating cross-region replication characteristics (p50: 0.8s, p99: 2.1s). Active-active versus active-passive deployment patterns are compared, with case studies showing production systems handling region-wide outages with RPO under 1 second and RTO under 30 seconds. Geographic data routing with Route 53 latency-based routing demonstrates 45-60% latency improvements for distributed user bases.<br/>INTEGRATION PATTERNS<br/>Integration patterns address real-world system complexity. DynamoDB Streams with Lambda enable event-driven architectures processing 100K+ events/second. DAX integration provides 10x latency reduction for read-heavy workloads. We present microservices patterns including distributed tracing with X-Ray, transactional boundaries using DynamoDB Transactions, and polyglot persistence strategies combining DynamoDB with RDS and S3 based on access patterns and consistency requirements.
-          </div>
-          </td>
-        
+          As the cloud-based data warehousing market matures, low technical configuration requirements are emerging as an important selling point. Where customers once had to carefully provision VMs, today's "serverless" model abstracts away most of the hardware details. In the next phase of this evolution, vendors are examining cost/performance constraints as configuration inputs, moving away from explicit mentions of hardware at all. In one formulation, they aim to deliver the best performance under some dollar budget. In the formulation we focus on, one aims for acceptable latency as cheaply as possible, where "acceptable" is defined as queries meeting their latency Service-Level Objectives (SLOs). In this work, we present a framework for assembling and operating multi-compute-instance cloud-based data warehouses under a latency SLO. We discuss the opportunities afforded by recent ML advances in the field, and describe promising paths forward and their early results. This is ongoing work.
+           </div>
+        </td>
       </tr>
+        
         </td>
       </tr>
 
@@ -349,11 +350,35 @@ In this talk, Nina Klimenkova, one of the first authors, will present a study th
           </td>
       </tr>
 
+
+
+
+      <tr>
+        <td>2:15 - 2:30</td>
+        <td>
+                
+      
+          <i>Architecting Distributed Systems with DynamoDB: A Production Perspective</i><br />
+          Tejas Pravinbhai Patel (Amazon)*<br />
+          <a href="javascript: toggleVisibility ('#po7')">Click to Toggle Abstract</a> 
+          <div id="po7" class="abstract" style="display: none;">
+            <p>
+              As cloud-native applications scale globally, architectural decisions around distributed NoSQL databases become critical to system reliability, performance, and cost efficiency. 
+              This talk presents theoretical foundations and practical engineering insights from building production-scale distributed systems at Amazon, focusing on DynamoDB as a cornerstone of modern cloud architecture. We explore how DynamoDB's design principles align with classical distributed database concepts while addressing real-world implementation challenges.<br/>DynamoDB provides single-digit millisecond performance at virtually any scale, yet achieving optimal performance, cost efficiency, and global availability requires deep understanding of distributed systems theory and practical architectural nuances. This talk bridges this gap through research-backed approaches validated in production deployments serving millions of requests per second.<br/>DISTRIBUTED SYSTEMS ARCHITECTURE<br/>We examine DynamoDB's architecture through distributed systems principles. Hash-based partitioning strategies demonstrate how partition key design affects throughput—improper selection creates hot partitions reducing effective throughput by up to 80%, while optimized designs achieve near-linear scalability. We analyze consistency models through the CAP theorem lens, presenting latency measurements showing eventual consistency reads exhibit 2-3x lower latency in cross-region scenarios while maintaining sub-second convergence for 99.9% of operations. Fault injection experiments demonstrate replication resilience across Availability Zones and Regions.<br/>MULTI-REGION ARCHITECTURES<br/>Multi-region architectures require sophisticated strategies. We present Global Tables architecture with conflict resolution using last-writer-wins and vector clocks, demonstrating cross-region replication characteristics (p50: 0.8s, p99: 2.1s). Active-active versus active-passive deployment patterns are compared, with case studies showing production systems handling region-wide outages with RPO under 1 second and RTO under 30 seconds. Geographic data routing with Route 53 latency-based routing demonstrates 45-60% latency improvements for distributed user bases.<br/>INTEGRATION PATTERNS<br/>Integration patterns address real-world system complexity. DynamoDB Streams with Lambda enable event-driven architectures processing 100K+ events/second. DAX integration provides 10x latency reduction for read-heavy workloads. We present microservices patterns including distributed tracing with X-Ray, transactional boundaries using DynamoDB Transactions, and polyglot persistence strategies combining DynamoDB with RDS and S3 based on access patterns and consistency requirements.
+          </div>
+          </td>
+        
+      </tr>
+        </td>
+      </tr>
+
+
+
    <tr>
         <td colspan="2">&nbsp;</td>
       </tr>
       <tr>
-        <td>2:15 - 2:45</td>
+        <td>2:30 - 3:00</td>
         <td><strong>Coffee Break</strong></td>
       </tr>
       <tr>
@@ -366,7 +391,7 @@ In this talk, Nina Klimenkova, one of the first authors, will present a study th
       </tr>
 
       <tr>
-        <td>2:45 - 3:15</td>
+        <td>3:00 - 3:30</td>
         <td><strong>Keynote 3: </strong>
            Ryan Marcus (University of Pennsylvania) <br> <i>Next Steps for Learned Query Optimization</i>
                      <br/>
@@ -386,7 +411,7 @@ In this talk, Nina Klimenkova, one of the first authors, will present a study th
 
 
       <tr>
-        <td>3:15 - 3:30</td>
+        <td>3:30 - 3:45</td>
         <td>
                     <i>Evergreen: Efficient Claim Verification for Semantic Aggregates</i><br />
                     Alexander Lee (Brown University and Snowflake Inc.)*;
@@ -410,7 +435,7 @@ Anupam Datta (Snowflake Inc.) <br />
 
 
       <tr>
-        <td>3:30 - 3:45</td>
+        <td>3:45 - 4:00</td>
         <td>
                     <i>KramaBench: A Benchmark for AI Systems on Data-Intensive Tasks</i><br />
                     Gerardo Vitagliano (MIT CSAIL)*; 
@@ -436,7 +461,7 @@ Tim Kraska (MIT CSAIL)
 
 
       <tr>
-        <td>3:45 - 4:00</td>
+        <td>4:00 - 4:15</td>
         <td>
                     <i>Optimizing Semantic Top-k Operators with Listwise Prompting</i><br />
                     Jason Shin (University of Rochester); 
@@ -458,7 +483,7 @@ Achieving full-fledged analytics, with efficient, accurate, and general-purpose 
       </tr>
 
       <tr>
-        <td>4:00 - 4:15</td>
+        <td>4:15 - 4:30</td>
         <td>
                     <i>Magneto: Combining Small and Large Language Models for Schema Matching</i><br />
                     Yurong Liu (New York University)*; 
@@ -481,7 +506,7 @@ Recent advances in language models opened new opportunities to address complex s
         <td colspan="2">&nbsp;</td>
       </tr> 
   <tr class="success">
-        <td>4:15-4:45</td>
+        <td>4:30-5:00</td>
         <td>
   <i><strong>Coffee Break & Poster Preparation</strong> </i>
   <tr>
@@ -493,7 +518,7 @@ Recent advances in language models opened new opportunities to address complex s
       <tr>
         
         <tr class="success">    
-        <td>4:45-6:15</td>
+        <td>5:00-6:30</td>
         <td>
   <i><strong>Poster Session </strong> </i>
 
@@ -504,7 +529,7 @@ Recent advances in language models opened new opportunities to address complex s
       </tr>
            <tr>
     <tr class="success">
-        <td>6:15-8:00</td>
+        <td>6:30-8:00</td>
         <td>
   <i><strong>Student Pizza Networking Session </strong> </i>
 
